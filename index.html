@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バルミューダ</title>
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=M+PLUS+Rounded+1c:wght@400;700&family=Montserrat:wght@300;500&family=Noto+Sans+JP:wght@100;400&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/10f7c298e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-flex">
+            <h1 class="header-logo"><a href=""><img src="/images/logo.png" alt=""></a></h1>
+
+            <!-- header sp -->
+            <div class="header-sp">
+                <div class="drawer-icon">
+                    <span class="drawer-icon-bar1"></span>
+                    <span class="drawer-icon-bar2"></span>
+                    <span class="drawer-icon-bar3"></span>
+                </div>
+
+                <div class="drawer-nav">
+                    <ul class="drawer-menu">
+                        <li class="drawer-list"><a href="">Home</a></li>
+                        <li class="drawer-list"><a href="">Products</a></li>
+                        <li class="drawer-list"><a href="">About</a></li>
+                        <li class="drawer-list"><a href="">Stores</a></li>
+                        <li class="drawer-list"><a href="">サポート</a></li>
+                        <li class="drawer-list"><a href=""><i class="fa-solid fa-cart-shopping"></i>ショッピングカート</a></li>
+                        <li class="drawer-list"><a href=""><i class="fa-solid fa-user"></i>マイページ</a></li>
+                    </ul>
+                </div>
+
+                <div class="drawer-background"></div>
+            </div>
+            <!-- header sp end -->
+
+            <!-- header pc -->
+            <div class="header-pc">
+                <ul class="header-menu">
+                    <li class="header-list"><a href="">Home</a></li>
+                    <li class="header-list"><a href="">Products</a></li>
+                    <li class="header-list"><a href="">About</a></li>
+                    <li class="header-list"><a href="">Stores</a></li>
+                    <li class="header-list"><a href="">サポート</a></li>
+                    <li class="header-list dropdown-is-open">
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-list"><a href=""><i class="fa-solid fa-cart-shopping fa-lg"></i>ショッピングカート</a></li>
+                            <li class="dropdown-list"><a href=""><i class="fa-solid fa-user fa-lg"></i>マイページ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- header pc end -->
+
+            <!-- sp カート -->
+            <div class="header-sp-cart"><a href=""><i class="fa-solid fa-cart-shopping"></i></a></div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide hero-slide hero-slide1">
+                    <a href="">
+                        <img src="/images/main1.jpg" alt="">
+                        <div class="hero-text">
+                            <p class="hero-tag tag-fff">新登場</p>
+                            <p class="hero-title hero-title-fff hero-title1">ReBaker</p>
+                        </div>
+                        <div class="hero-btn btn-bottom">詳しく</div>
+                    </a>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide2">
+                    <a href="">
+                        <img src="/images/main2.jpg" alt="">
+                        <div class="hero-text">
+                            <p class="hero-title hero-title-fff hero-title2">BALMUDA The Plate <span class="square square-fff">Pro</span></p>
+                        </div>
+                        <div class="hero-btn btn-bottom">詳しく</div>
+                    </a>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide3">
+                    <a href="">
+                        <img src="/images/main3.jpg" alt="">
+                        <div class="hero-text">
+                            <p class="hero-tag tag-000">2023年11月 リニューアル</p>
+                            <p class="hero-title hero-title-000 hero-title3">BALMUDA The Toaster <span class="square square-000">Pro</span></p>
+                        </div>
+                        <div class="hero-btn btn-bottom">詳しく</div>
+                    </a>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide4">
+                    <a href="">
+                        <img src="/images/main4.jpg" alt="">
+                        <div class="hero-text">
+                            <p class="hero-title hero-title-fff hero-title4">BALMUDA The Brew</p>
+                        </div>
+                        <div class="hero-btn btn-top">詳しく</div>
+                    </a>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide5">
+                    <a href="">
+                        <img src="images/main5.jpg" alt="">
+                        <div class="hero-text">
+                            <p class="hero-title hero-title-000 hero-title5">BALMUDA The Pure</p>
+                        </div>
+                        <div class="hero-btn-bg btn-top">詳しく</div>
+                    </a>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide6">
+                    <a href="">
+                        <img src="/images/main6.jpg" alt="">
+                        <div class="hero-text">
+                            <p class="hero-title hero-title-000 hero-title6">BALMUDA The Light</p>
+                        </div>
+                        <div class="hero-btn btn-top">詳しく</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <section class="popular-products">
+        <div class="inner-s">
+            <h2>人気の製品</h2>
+
+            <div class="popular-container">
+                <ul class="popular-menu">
+                    <li class="popular-list">
+                        <a href="">
+                            <img src="images/p-1.png" alt="">
+                            <p class="p-product-name">BALMUDA The Plate <span class="square">Pro</span></p>
+                            <p class="p-product-name-ja">ステンレス ホットプレート</p>
+                        </a>
+                    </li>
+                    <li class="popular-list">
+                        <a href="">
+                            <img src="images/p-2.png" alt="">
+                            <p class="p-product-name">BALMUDA The Toaster <span class="square square-000">Pro</span></p>
+                            <p class="p-product-name-ja">サラマンダー機能つき<br>スチームトースター</p>
+                        </a>
+                    </li>
+                    <li class="popular-list">
+                        <a href="">
+                            <img src="images/p-3.png" alt="">
+                            <p class="p-product-name">BALMUDA The Range</p>
+                            <p class="p-product-name-ja">オーブンレンジ</p>
+                        </a>
+                    </li>
+                    <li class="popular-list">
+                        <a href="">
+                            <img src="images/p-4.png" alt="">
+                            <p class="p-product-name">BALMUDA The Pure</p>
+                            <p class="p-product-name-ja">タワー型 空気清浄機</p>
+                        </a>
+                    </li>
+                    <li class="popular-list">
+                        <a href="">
+                            <img src="images/p-4.png" alt="">
+                            <p class="p-product-name">Rain</p>
+                            <p class="p-product-name-ja">気化式加湿器</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="more-btn"><a href="">すべての製品を見る</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="inner-s">
+            <ul class="news-lists">
+                <li class="news-card">
+                    <a href="">
+                        <img src="images/news1.jpg" alt="">
+                        <p class="news-title">パンも、揚げものも。ReBaker 新登場</p>
+                        <p class="news-desc">最新の温度制御による絶妙な火入れが、驚きのおいしさを実現。毎日役立つリベイカーの登場です。</p>
+                    </a>
+                </li>
+                <li class="news-card">
+                    <a href="">
+                        <img src="images/news2.jpg" alt="">
+                        <p class="news-title">新生活キャンペーンを実施中</p>
+                        <p class="news-desc">対象製品をご購入いただいた方の中から抽選で、iittala（イッタラ）のグラスをプレゼント。</p>
+                    </a>
+                </li>
+                <li class="news-card">
+                    <a href="">
+                        <img src="images/news3.jpg" alt="">
+                        <p class="news-title">GreenFan最新作 Coming Soon</p>
+                        <p class="news-desc">この春、グリーンファンの新モデルが登場。特設ページを公開しました。</p>
+                    </a>
+                </li>
+                <li class="news-card">
+                    <a href="">
+                        <img src="images/news4.jpg" alt="">
+                        <p class="news-title">圧倒的風量で部屋中の空気を清浄</p>
+                        <p class="news-desc">毎日の空気清浄に特化した専用機、BALMUDA The Pureの特設ページを新たに公開しました。</p>
+                    </a>
+                </li>
+                <li class="news-card">
+                    <a href="">
+                        <img src="images/news5.jpg" alt="">
+                        <p class="news-title">ギフトラッピング</p>
+                        <p class="news-desc">大切な家族や友人へのプレゼントに。特別な思いを伝えるギフトラッピングを用意しています。</p>
+                    </a>
+                </li>
+                <li class="news-card">
+                    <a href="">
+                        <img src="images/news6.jpg" alt="">
+                        <p class="news-title">バルミューダのレシピ集</p>
+                        <p class="news-desc">トースターやホットプレートなど。バルミューダキッチンシリーズの100品を超えるレシピを紹介。</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="inner-s">
+            <ul class="about-lists">
+                <li class="about-card">
+                    <a href="">
+                        <img src="images/about1.jpg" alt="">
+                        <p class="about-title">バルミューダについて</p>
+                        <p class="about-desc">バルミューダは2003年に東京で設立され、今年で創業20年を迎えました。</p>
+                    </a></li>
+                <li class="about-card">
+                    <a href="">
+                        <img src="images/about2.jpg" alt="">
+                        <p class="about-title">小型風力発電普及へのチャレンジ</p>
+                        <p class="about-desc">「電力を使う」だけでなく「作る」領域へ。バルミューダは、小型風力発電の普及に挑戦します。</p>
+                    </a>
+                </li>
+                <li class="about-card">
+                    <a href="">
+                        <img src="images/about3.jpg" alt="">
+                        <p class="about-title">お店でバルミューダ製品を体験</p>
+                        <p class="about-desc">青山の旗艦店をはじめ、銀座・大阪・名古屋・神戸のブランドショップで​実際に製品を体験いただけます。</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="inner-s">
+            <div class="info-container">
+                <div class="info-sns">
+                    <p class="info-title">公式アカウント</p>
+                    <p class="info-desc">Twitter、facebook、Instagram、noteの公式アカウントのご案内</p>
+                    <ul class="sns-icons">
+                        <li class="sns-list"><a href=""></a></li>
+                        <li class="sns-list"><a href=""></a></li>
+                        <li class="sns-list"><a href=""></a></li>
+                        <li class="sns-list"><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="info-mail">
+                    <p class="info-title info-title-icon">最新情報をお届けします</p>
+                    <p class="info-desc">ニュースメール限定のセール情報やお知らせ、オリジナルレシピなどを配信しています</p>
+                    <a href="" class="info-btn">登録する</a>
+                </div>
+                <div class="info-register">
+                    <p class="info-title info-title-icon">製品登録のご案内</p>
+                    <p class="info-desc">購入製品をご登録いただくとスムーズにサポートを受けることができます</p>
+                    <a href="" class="info-btn">登録する</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="notice">
+        <div class="inner-s">
+            <ul class="notice-container">
+                <li class="notice-list"><a href="">BALMUDA Phone（ソフトバンク販売モデル / SIMフリーモデル）をお持ちのお客様へ重要なお知らせ</a></li>
+                <li class="notice-list"><a href="">悪質なサイト／SNSのなりすましアカウントによる詐欺被害に関するご注意</a></li>
+                <li class="notice-list"><a href="">BALMUDA The Range（K04Aシリーズ）をお持ちのお客様へ重要なお知らせ</a></li>
+                <li class="notice-list"><a href="">BALMUDA The Toaster（K01Aシリーズ）をお持ちのお客様へ重要なお知らせ</a></li>
+                <li class="notice-list"><a href="">GreenFan Japan 2014年・2015年モデルをお持ちのお客様へ重要なお知らせ</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="all-product">
+        <div class="all-product-container">
+            <div class="kitchen">
+                <p class="all-product-title">Kitchen</p>
+                <ul class="kitchen-menu">
+                    <li class="kitchen-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Toaster</p>
+                            <p class="product-name-ja">スチームトースター</p>
+                        </a>
+                    </li>
+                    <li class="kitchen-list">
+                        <a href="">
+                            <p class="product-name">ReBaker</p>
+                            <p class="product-name-ja">リベイクトースター</p>
+                        </a>
+                    </li>
+                    <li class="kitchen-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Pot</p>
+                            <p class="product-name-ja">電気ケトル</p>
+                        </a>
+                    </li>
+                    <li class="kitchen-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Brew</p>
+                            <p class="product-name-ja">オープンドリップ式コーヒーメーカー</p>
+                        </a>
+                    </li>
+                    <li class="kitchen-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Gohan</p>
+                            <p class="product-name-ja">電気炊飯器</p>
+                        </a>
+                    </li>
+                    <li class="kitchen-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Range</p>
+                            <p class="product-name-ja">オーブンレンジ</p>
+                        </a>
+                    </li>
+                    <li class="kitchen-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Plate Pro</p>
+                            <p class="product-name-ja">ステンレス ホットプレート</p>
+                        </a>
+                    </li>
+                    <li class="kitchen-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Curry</p>
+                            <p class="product-name-ja">カレーソース</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="air">
+                <p class="all-product-title">Air</p>
+                <ul class="air-menu">
+                    <li class="air-list">
+                        <a href="">
+                            <p class="product-name">The GreenFan</p>
+                            <p class="product-name-ja">扇風機</p>
+                        </a>
+                    </li>
+                    <li class="air-list">
+                        <a href="">
+                            <p class="product-name">GreenFan C2</p>
+                            <p class="product-name-ja">ポータブルサーキュレーター</p>
+                        </a>
+                    </li>
+                    <li class="air-list">
+                        <a href="">
+                            <p class="product-name">GreenFan Cirq</p>
+                            <p class="product-name-ja">サーキュレーター</p>
+                        </a>
+                    </li>
+                    <li class="air-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Pure</p>
+                            <p class="product-name-ja">空気清浄機</p>
+                        </a>
+                    </li>
+                    <li class="air-list">
+                        <a href="">
+                            <p class="product-name">Rain</p>
+                            <p class="product-name-ja">加湿器</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="audio">
+                <p class="all-product-title">Audio</p>
+                <ul class="audio-menu">
+                    <li class="audio-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Speaker</p>
+                            <p class="product-name-ja">ワイヤレススピーカー</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="cleaner">
+                    <p class="all-product-title">Cleaner</p>
+                    <ul class="Cleaner-menu">
+                        <li class="Cleaner-list">
+                            <a href="">
+                                <p class="product-name">BALMUDA The Cleaner</p>
+                                <p class="product-name-ja">ホバー式クリーナー</p>
+                            </a>
+                        </li>
+                        <li class="Cleaner-list">
+                            <a href="">
+                                <p class="product-name">BALMUDA The Cleaner<span>lite</span></p>
+                                <p class="product-name-ja">ホバー式クリーナー</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lighting">
+                <p class="all-product-title">Lighting</p>
+                <ul class="lighting-menu">
+                    <li class="lighting-list">
+                        <a href="">
+                            <p class="product-name">BALMUDA The Lantern</p>
+                            <p class="product-name-ja">ポータブルLEDランタン</p>
+                        </a>
+                    </li>
+                    <li class="lighting-list">
+                        <a href="">
+                            <p class="product-name">Airline</p>
+                            <p class="product-name-ja">LEDデスクライト</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="smart-phone">
+                    <p class="all-product-title">Lighting</p>
+                    <ul class="smart-phone-menu">
+                        <li class="smart-phone-list">
+                            <a href="">
+                                <p class="product-name">BALMUDA Phone</p>
+                                <p class="product-name-ja">4.9インチ 5G スマートフォン</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
