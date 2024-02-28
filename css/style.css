@@ -48,6 +48,7 @@ a {
 }
 
 /* 共通項目 */
+/* inner */
 .inner {
     width: 100%;
     max-width: 100%;
@@ -58,7 +59,18 @@ a {
     max-width: 980px;
     width: 100%;
     margin: 0 auto;
-    padding-top: 48px;
+}
+
+.inner-topics {
+    padding: 48px 0;
+}
+
+.inner-info {
+    padding: 64px 0 56px;
+}
+
+.inner-notice {
+    width: 90%;
 }
 
 /* ヒーロー画像 タイトル span */
@@ -632,37 +644,364 @@ h2 {
     opacity: 0;
 }
 
+/* topics */
 /* news */
-.news {
+/* about */
+.topics {
     border: 1px solid #ddd;
+}
+
+.topics-lists {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.topics-card {
+    text-align: center;
+}
+
+.topics-card:not(:first-child) {
+    margin-top: 48px;
+}
+
+.topics-card img {
+    aspect-ratio: 307 / 130;
+    object-fit: cover;
+}
+
+.topics-title {
+
+}
+
+.topics-desc {
+    font-size: 12.8px;
+    color: #999999;
+    padding: 0 26px;
+}
+
+/* info */
+.info {
+
 }
 
 .inner-s {
 
 }
 
-.news-lists {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.news-card {
+.info-container {
     text-align: center;
 }
 
-.news-card:not(:first-child) {
-    margin-top: 48px;
-}
-
-.news-title {
+.info-sns {
 
 }
 
-.news-desc {
+.info-title {
+    color: #333;
+    line-height: 2;
+}
+
+.info-desc {
+    margin-top: 11px;
+    font-size: 0.8rem;
+    color: #9a9a9a;
+}
+
+.sns-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 11px;
+}
+
+.sns-list i {
+    font-size: 28px;
+}
+
+.sns-list img {
+    width: 72px;
+    height: 72px;
+}
+
+.info-mail {
+    margin-top: 26px;
+}
+
+.info-title-icon i {
+    font-size: 24px;
+    margin-right: 11px;
+}
+
+.info-btn {
+    display: inline-block;
+    width: 140px;
+    height: 32px;
+    border: 1px solid #666;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #666;
+    margin-top: 11px;
+}
+
+.info-register {
+    margin-top: 56px;
+}
+
+/* notice */
+.notice {
+    padding: 32px 0;
+    background-color: #e5e5e5;
+}
+
+.inner-s {
+
+}
+
+.notice-title {
+    font-size: 0.9em;
+    color: #333;
+    border-bottom: 1px solid #898787;
+    padding-bottom: 8px;
+}
+
+.notice-container {
+
+}
+
+.notice-list {
+    padding-left: 22px;
+    margin-top: 18px;
     font-size: 12.8px;
-    color: #999999;
-    padding: 0 26px;
+    color: #333;
+    position: relative;
 }
 
+.notice-list a::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 0;
+    font: var(--fa-font-solid);
+    content: "\f138";
+    color: #666;
+}
 
-/* news-container */
+.notice-list:not(:first-child) {
+    margin-top: 16px;
+}
+
+/* all product */
+.all-product-container {
+    background-color: #404040;
+
+}
+
+.all-product-main-title {
+    font-size: 20px;
+    color: #cbcbcb;
+}
+
+.kitchen {
+
+}
+
+.kitchen-menu {
+
+}
+
+.kitchen-list {
+
+}
+
+.product-name {
+
+}
+
+.product-name-ja {
+
+}
+
+.air {
+
+}
+
+.air-menu {
+
+}
+
+.air-list {
+
+}
+
+.recipe {
+
+}
+
+.recipe-menu {
+
+}
+
+.recipe-list {
+
+}
+
+.audio {
+
+}
+
+.audio-menu {
+
+}
+
+.audio-list {
+
+}
+
+.cleaner {
+
+}
+
+.Cleaner-menu {
+
+}
+
+.Cleaner-list {
+
+}
+
+.supplies {
+
+}
+
+.supplies-menu {
+
+}
+
+.supplies-list {
+
+}
+
+.lighting {
+
+}
+
+.lighting-menu {
+
+}
+
+.lighting-list {
+
+}
+
+.smart-phone {
+
+}
+
+.smart-phone-menu {
+
+}
+
+.smart-phone-list {
+
+}
+
+.footer-inner {
+
+}
+
+.f-menu-container {
+
+}
+
+.f-flex-left {
+
+}
+
+.f-topics-menu {
+
+}
+
+.f-topics-list {
+
+}
+
+.f-flex-right {
+
+}
+
+.f-product {
+
+}
+
+.f-menu-title {
+
+}
+
+.f-menu {
+
+}
+
+.f-menu-list {
+
+}
+
+.f-topics {
+
+}
+
+.f-stores {
+
+}
+
+.f-suport {
+
+}
+
+.f-online-store {
+
+}
+
+.f-countries {
+
+}
+
+.footer-container {
+
+}
+
+.f-sns {
+
+}
+
+.sns-list {
+
+}
+
+.f-logo {
+
+}
+
+.f-link-container {
+
+}
+
+.f-link-menu {
+
+}
+
+.f-link-list {
+
+}
+
+.copyright {
+
+}
+
+/* footer */
+.footer {
+    background-color: #333;
+    padding: 32px 0;
+}
