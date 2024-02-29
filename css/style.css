@@ -73,6 +73,12 @@ a {
     width: 90%;
 }
 
+.footer-inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
 /* ヒーロー画像 タイトル span */
 .square {
     display: inline-block;
@@ -195,8 +201,10 @@ a {
 .drawer-nav {
     position: fixed;
     width: 100%;
+    height: 100%;
     top: 56px;
     left: 0;
+    background-color: #fff;
     transition: all 0.3s ease;
 
     /* drawer-nav 非表示 */
@@ -234,23 +242,6 @@ a {
 
 .drawer-list i {
     margin-right: 8px;
-}
-
-.drawer-background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 56px;
-    left: 0;
-    background-color: #fff;
-    transition: all 0.3s ease;
-
-    /* drawer-background 非表示 */
-    transform: translateX(-100%);
-}
-
-.drawer-background.open {
-    transform: translateX(0);
 }
 
 /* sp カート */
@@ -794,18 +785,37 @@ h2 {
 }
 
 /* all product */
-.all-product-container {
+.all-product {
     background-color: #404040;
+    padding: 32px 0;
+}
+
+.all-product-container {
+    width: 90%;
+    margin: 0 auto;
+    color: #cbcbcb;
 
 }
 
 .all-product-main-title {
     font-size: 20px;
-    color: #cbcbcb;
+    padding-bottom: 14px;
+}
+
+.all-p-bt {
+    border-top: 1px solid #666;
+    padding-top: 24px;
+}
+
+.all-p-bt:nth-child(n + 3) {
+    margin-top: 8px;
+}
+
+.all-product-title {
+    font-size: 17.6px;
 }
 
 .kitchen {
-
 }
 
 .kitchen-menu {
@@ -1003,5 +1013,160 @@ h2 {
 /* footer */
 .footer {
     background-color: #333;
-    padding: 32px 0;
+    color: #a5a5a5;
+    padding: 42px 0 12px;
 }
+
+.f-menu-container {
+
+}
+
+.f-menu-title {
+    border-bottom: 1px solid #666;
+    padding-bottom: 8px;
+    margin-top: 32px;
+}
+
+.f-news-title {
+    font-size: 20px;
+}
+
+.f-flex-left {
+}
+
+.f-topics-menu {
+
+}
+
+.f-topics-list {
+    margin-top: 14px;
+}
+
+.f-topics-list a {
+    font-size: 14px;
+}
+
+.f-flex-right {
+
+}
+
+.f-product {
+    margin-top: 52px;
+}
+
+.f-menu-title {
+}
+
+
+.f-menu {
+
+}
+
+.f-menu-list:first-child {
+    margin-top: 10px;
+}
+
+.f-menu-list {
+    font-size: 12.8px;
+    color: #ccc;
+}
+
+.f-topics {
+
+}
+
+.f-stores {
+
+}
+
+.f-suport {
+
+}
+
+.f-online-store {
+
+}
+
+.f-countries {
+
+}
+
+.footer-container {
+    margin-top: 52px;
+}
+
+.f-sns {
+    display: flex;
+    justify-content: center;
+}
+
+.f-sns-list i {
+    color: #fff;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.f-logo {
+    margin-top: 23px;
+    text-align: center;
+}
+
+.f-logo img {
+    width: 135px;
+    height: 28px;
+}
+
+.f-link-container {
+    margin-top: 40px;
+}
+
+.f-link-menu {
+
+}
+
+.f-link-list a {
+    display: block;
+    font-size: 10px;
+    line-height: 18px;
+    color: #999;
+}
+
+.copyright {
+    display: block;
+    margin-top: 28px;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* information */
+.information {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #fff;
+}
+
+.information i {
+    font-size: 20px;
+    color: #039be5;
+}
+
+.information-desc {
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+}
+
+.information-btn {
+    width: 72px;
+    height: 29.5px;
+    background-color: #039be5;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+

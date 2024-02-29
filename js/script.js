@@ -3,7 +3,6 @@
 $('.drawer-icon').on('click', function() {
 	$(this).toggleClass('open');
 	$('.drawer-nav').toggleClass('open');
-	$('.drawer-background').toggleClass('open');
 });
 
 // swiper hero
