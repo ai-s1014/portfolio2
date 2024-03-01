@@ -113,7 +113,15 @@ a {
     background-color: rgba(0,0,0,.8);
     box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
     z-index: 1000;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease;
 }
+
+/*　上に上がる動き　*/
+.header.hidden{
+    transform: translate3d(0, -100%, 0);
+
+  }
 
 .header-flex {
     width: 100%;
@@ -577,7 +585,7 @@ h2 {
 }
 
 .popular-container {
-
+    overflow-x: scroll;
 }
 
 .popular-menu {
