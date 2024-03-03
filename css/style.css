@@ -792,7 +792,7 @@ h2 {
     margin-top: 16px;
 }
 
-/* all product */
+/* all-product */
 .all-product {
     background-color: #404040;
     padding: 32px 0;
@@ -819,203 +819,35 @@ h2 {
     margin-top: 8px;
 }
 
+/* アコーディオンメニュー */
+.kitchen {
+
+}
+
+.all-p-bt {
+
+}
+
 .all-product-title {
     font-size: 17.6px;
+    padding-left: 55px;
 }
 
-.kitchen {
+.all-product-title-ja {
+    font-size: 11.2px;
+    margin-left: 15px;
 }
 
-.kitchen-menu {
-
+.accordion-menu {
+    display: none;
 }
 
-.kitchen-list {
-
+.all-product-sp-title {
+    display: block;
 }
 
-.product-name {
-
-}
-
-.product-name-ja {
-
-}
-
-.air {
-
-}
-
-.air-menu {
-
-}
-
-.air-list {
-
-}
-
-.recipe {
-
-}
-
-.recipe-menu {
-
-}
-
-.recipe-list {
-
-}
-
-.audio {
-
-}
-
-.audio-menu {
-
-}
-
-.audio-list {
-
-}
-
-.cleaner {
-
-}
-
-.Cleaner-menu {
-
-}
-
-.Cleaner-list {
-
-}
-
-.supplies {
-
-}
-
-.supplies-menu {
-
-}
-
-.supplies-list {
-
-}
-
-.lighting {
-
-}
-
-.lighting-menu {
-
-}
-
-.lighting-list {
-
-}
-
-.smart-phone {
-
-}
-
-.smart-phone-menu {
-
-}
-
-.smart-phone-list {
-
-}
-
-.footer-inner {
-
-}
-
-.f-menu-container {
-
-}
-
-.f-flex-left {
-
-}
-
-.f-topics-menu {
-
-}
-
-.f-topics-list {
-
-}
-
-.f-flex-right {
-
-}
-
-.f-product {
-
-}
-
-.f-menu-title {
-
-}
-
-.f-menu {
-
-}
-
-.f-menu-list {
-
-}
-
-.f-topics {
-
-}
-
-.f-stores {
-
-}
-
-.f-suport {
-
-}
-
-.f-online-store {
-
-}
-
-.f-countries {
-
-}
-
-.footer-container {
-
-}
-
-.f-sns {
-
-}
-
-.sns-list {
-
-}
-
-.f-logo {
-
-}
-
-.f-link-container {
-
-}
-
-.f-link-menu {
-
-}
-
-.f-link-list {
-
-}
-
-.copyright {
-
+.all-product-pc {
+    display: none;
 }
 
 /* footer */
@@ -1176,5 +1008,4 @@ h2 {
     text-align: center;
     color: #fff;
 }
-
 

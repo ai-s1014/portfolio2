@@ -33,3 +33,8 @@ const swiper = new Swiper('.swiper', {
       clickable: true,
     },
 });
+
+// アコーディオンメニュー
+$('.accordion-title').click(function(){
+  $(this).siblings('.accordion-menu').stop().slideToggle();
+});
