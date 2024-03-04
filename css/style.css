@@ -819,15 +819,6 @@ h2 {
     margin-top: 8px;
 }
 
-/* アコーディオンメニュー */
-.kitchen {
-
-}
-
-.all-p-bt {
-
-}
-
 .all-product-title {
     font-size: 17.6px;
     padding-left: 55px;
@@ -838,14 +829,52 @@ h2 {
     margin-left: 15px;
 }
 
-.accordion-menu {
-    display: none;
-}
-
 .all-product-sp-title {
     display: block;
 }
 
+/* アコーディオンメニュー */
+.accordion-menu {
+    display: none;
+}
+
+.accordion-list {
+    padding: 24px 0 8px;
+}
+
+.icon-plus {
+    position: relative;
+}
+
+.icon-plus::before,
+.icon-mark::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0;
+    bottom: -12px;
+    width: 17px;
+    height: 1px;
+    margin: auto 0px;
+    background: #ccc;
+    transition: transform .2s ease 0s;
+    transform: translateX(-50%);
+}
+
+.icon-plus:after {
+    top: 3px;
+    left: -3px;
+    transform: rotate(90deg);
+}
+
+.accordion-title {
+    padding-left: 55px;
+}
+
+/* SP表示 */
+
+
+/* PC表示 */
 .all-product-pc {
     display: none;
 }
