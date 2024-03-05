@@ -3,6 +3,7 @@
 $('.drawer-icon').on('click', function() {
 	$(this).toggleClass('open');
 	$('.drawer-nav').toggleClass('open');
+  $('.drawer-background').toggleClass('open');
 });
 
 // header スクロール 表示・非表示
@@ -37,4 +38,5 @@ const swiper = new Swiper('.swiper', {
 // アコーディオンメニュー
 $('.accordion-title').click(function(){
   $(this).siblings('.accordion-menu').stop().slideToggle();
+  $(this).toggleClass('active');
 });
