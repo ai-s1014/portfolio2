@@ -132,11 +132,18 @@ a {
     padding: 0 19px;
 }
 
-@media screen and (min-width:641px) {
+@media screen and (min-width: 641px) and (max-width: 810px) {
+    .header-flex {
+        height: 76px;
+        padding: 0;
+        background-color: #202020;
+    }
+}
+
+@media screen and (min-width: 811px) {
     .header-flex {
         height: 100px;
         padding: 0;
-        justify-content: left;
         background-color: #202020;
     }
 }
@@ -156,8 +163,26 @@ a {
     height: 23px;
 }
 
-/* ドロワーメニュー */
+@media screen and (min-width: 641px) and (max-width: 810px) {
+    /* ロゴ */
+    .header-logo {
+        width: 174px;
+        text-align: center;
+        order: 1;
+    }
+}
+
+@media screen and (min-width:811px) {
+    /* ロゴ */
+    .header-logo {
+        width: 210px;
+        text-align: center;
+    }
+}
+
+/* SP ドロワーメニュー */
 .header-sp {
+    display: block;
     /* flex 順番入れ替え */
     order: 1;
 }
@@ -286,113 +311,134 @@ a {
     display: none;
 }
 
-/* sp時 tec-logo 非表示 */
-.header-tec-logo {
-    display: none;
-}
 
 /* pc */
-@media screen and (min-width:641px) {
-    /* ロゴ */
-    .header-logo {
-        width: 265px;
-        text-align: center;
-        order: 1;
+/* メニュー */
+.header-pc {
+    display: none;
+    order: 2;
+}
+
+@media screen and (min-width:811px) {
+    .header-pc {
+        width: calc(100% - 210px);
+        justify-content: left;
     }
-    /* メニュー */
+}
+
+@media screen and (min-width: 641px) and (max-width: 810px) {
+    .header-pc {
+        width: calc(100% - 174px);
+    }
+}
+
+.header-menu {
+    display: flex;
+}
+
+.header-list {
+    margin-right: 0;
+}
+
+.header-list:not(:first-child) {
+    margin-left: 22px;
+}
+
+@media screen and (min-width:811px) {
+    .header-list:not(:first-child) {
+        margin-left: 35px;
+    }
+}
+
+.header-list a {
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: #ccc;
+    position: relative;
+}
+
+@media screen and (min-width:811px) {
+    .header-list a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 810px) {
+    .header-list a {
+        font-size: 12px;
+    }
+}
+
+.header-list:nth-child(5) a {
+    font-size: 14px;
+}
+
+.header-list a:hover {
+    color: #fff;
+}
+
+.header-list a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 3rem;
+    height: 3px;
+    margin-left: -1.5rem;
+    background-color: #fff;
+}
+
+/* ShoppingCart dropdown*/
+.dropdown-is-open {
+    height: inherit; /* headerの高さ継承 */
+    position: relative;
+}
+
+.dropdown-menu {
+    visibility: hidden; /* デフォルトでは非表示の状態にしておく */
+    opacity: 0; /* 不透明度0 */
+    transition: all .3s; /* 表示の変化を0.3秒に指定 */
+    position: absolute;
+    width: 270px;
+    top: 51px;
+    left: 0;
+    transform: translateX(-100px);
+    background-color: #3a3a3a;
+    box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
+}
+
+.dropdown-is-open:hover .dropdown-menu {
+    visibility: visible; /* ホバーしたら表示 */
+    opacity: 1; /* 不透明度1 */
+}
+
+.dropdown-list {
+    padding-left: 45px;
+}
+
+.dropdown-list a {
+    font-size: 14px;
+    line-height: 76px;
+    font-weight: 200;
+}
+
+.dropdown-list a:hover {
+    color: #4ba53a;
+}
+
+.fa-lg {
+    margin-right: 10px;
+}
+
+.dropdown-list a:hover::after {
+    position: static;
+}
+
+@media screen and (min-width: 641px) {
+    /* pc時 header-pc 表示 */
     .header-pc {
         display: block;
-        order: 2;
     }
-
-    .header-menu {
-        display: flex;
-        font-size: 0.9rem;
-
-    }
-
-    .header-list {
-        margin-right: 0;
-        line-height: 100px;
-    }
-
-    .header-list:not(:first-child) {
-        margin-left: 48px;
-    }
-
-    .header-list a {
-        font-size: 1em;
-        letter-spacing: 0.05em;
-        font-weight: 700;
-        color: #ccc;
-        position: relative;
-    }
-
-    .header-list:nth-child(5) a {
-        font-size: 14px;
-    }
-
-    .header-list a:hover {
-        color: #fff;
-    }
-
-    .header-list a:hover::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        width: 3rem;
-        height: 3px;
-        margin-left: -1.5rem;
-        background-color: #fff;
-    }
-
-    /* ShoppingCart dropdown*/
-    .dropdown-is-open {
-        height: inherit; /* headerの高さ継承 */
-        position: relative;
-    }
-
-    .dropdown-menu {
-        visibility: hidden; /* デフォルトでは非表示の状態にしておく */
-        opacity: 0; /* 不透明度0 */
-        transition: all .3s; /* 表示の変化を0.3秒に指定 */
-        position: absolute;
-        width: 270px;
-        top: 100px;
-        left: 0;
-        transform: translateX(-100px);
-        background-color: #3a3a3a;
-        box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
-    }
-
-    .dropdown-is-open:hover .dropdown-menu {
-        visibility: visible; /* ホバーしたら表示 */
-        opacity: 1; /* 不透明度1 */
-    }
-
-    .dropdown-list {
-        padding-left: 45px;
-    }
-
-    .dropdown-list a {
-        font-size: 14px;
-        line-height: 76px;
-        font-weight: 200;
-    }
-
-    .dropdown-list a:hover {
-        color: #4ba53a;
-    }
-
-    .fa-lg {
-        margin-right: 10px;
-    }
-
-    .dropdown-list a:hover::after {
-        position: static;
-    }
-
 
     /* pc時 header-sp 非表示 */
     .header-sp {
@@ -411,7 +457,13 @@ a {
     position: relative;
 }
 
-@media screen and (min-width:641px) {
+@media screen and (min-width: 641px) and (max-width: 810px) {
+    .hero {
+        margin-top: 76px;
+    }
+}
+
+@media screen and (min-width:811px) {
     .hero {
         margin-top: 100px;
     }
@@ -426,13 +478,13 @@ a {
 @media screen and (min-width:641px) {
     .swiper {
         width: 100%;
-        height: 100vh;
     }
 }
 
-
-.swiper-wrapper {
-
+@media screen and (min-width:641px) {
+    .swiper-wrapper {
+        height: 320px;
+    }
 }
 
 .swiper-slide img {
@@ -441,6 +493,12 @@ a {
     object-fit: cover;
 }
 
+@media screen and (min-width:641px) {
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+    }
+}
 .hero-slide {
     text-align: center;
 }
@@ -550,8 +608,6 @@ a {
     border-radius: 200px;
 }
 
-
-
 @media screen and (min-width:641px) {
     .hero-btn {
         width: 130px;
@@ -579,9 +635,32 @@ a {
     padding-top: 10px;
 }
 
+@media screen and (min-width:641px) {
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: -18%;
+    }
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,6px);
+}
+
+@media screen and (min-width:641px) {
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap,7px);
+    }
+}
+
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
+}
+
+@media screen and (min-width:641px) {
+    .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 .swiper-pagination-bullet-active {
@@ -602,21 +681,58 @@ h2 {
     color: #333;
 }
 
+@media screen and (min-width:641px) {
+    h2 {
+        font-size: 40px;
+    }
+}
+
 .popular-container {
     overflow-x: scroll;
+    overflow-y: hidden;
+    margin-top: 10px;
+}
+
+@media screen and (min-width:641px) {
+    .popular-container {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
 }
 
 .popular-menu {
     width: 1200px;
     display: flex;
     justify-content: space-around;
-    padding: 20px 0;
+    padding: 0 20px;
+}
+
+@media screen and (min-width:641px) and (max-width: 980px) {
+    .popular-menu {
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 32px;
+    }
 }
 
 .popular-list {
     width: 20%;
+    height: 288px;
     text-align: center;
-    padding: 20px 10px;
+    line-height: 1.5;
+}
+
+@media screen and (min-width:641px) and (max-width: 980px) {
+    .popular-list {
+        width: 35%;
+        height: auto;
+    }
+
+    /* PC表示 非表示 */
+    .pc-none {
+        display: none;
+    }
 }
 
 .popular-list img {
@@ -625,8 +741,9 @@ h2 {
 }
 
 .p-product-name {
+    font-size: 17px;
     font-weight: 700;
-    margin: 0;
+    margin: 15px 0 0 0;
 }
 
 .p-product-name-ja {
@@ -637,6 +754,7 @@ h2 {
 
 .more-btn {
     text-align: center;
+    margin-top: 40px;
 }
 .more-btn a {
     padding-bottom: 7.5px;
@@ -908,7 +1026,7 @@ h2 {
     top: 50%;
     right: 8px;
     border: 1px solid #ccc;
-    transform: translateY(25%);
+    transform: translateY(-50%);
 }
 
 .icon-square::before {
@@ -916,7 +1034,7 @@ h2 {
     content: "";
     width: 7px;
     height: 7px;
-    bottom: 25%;
+    bottom: 35%;
     right: 20px;
     border-bottom: 1px solid #ccc;
     border-left: 1px solid #ccc;
