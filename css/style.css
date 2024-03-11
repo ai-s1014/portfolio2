@@ -65,8 +65,20 @@ a {
     padding: 48px 0;
 }
 
+@media screen and (min-width: 641px) {
+    .inner-topics {
+        padding: 64px 0 0;
+    }
+}
+
 .inner-info {
     padding: 64px 0 56px;
+}
+
+@media screen and (min-width: 641px) {
+    .inner-info {
+        padding: 56px 24px;
+    }
 }
 
 .inner-notice {
@@ -78,6 +90,12 @@ a {
     margin: 0 auto;
 }
 
+/* topics newsとaboutの間の線 */
+.line {
+    width: 88%;
+    border-top: 1px solid #ddd;
+    margin: 0 auto;
+}
 
 /* ヒーロー画像 タイトル span */
 .square {
@@ -99,7 +117,7 @@ a {
     font-size: 36px;
 }
 
-/* popular-list　タイトル span */
+/* popular-list タイトル span */
 .p-square {
     font-size: 16px;
     padding: 0.1em 0.2em;
@@ -117,11 +135,17 @@ a {
     transition: all 0.3s ease;
 }
 
-/*　上に上がる動き　*/
-.header.hidden{
-    transform: translate3d(0, -100%, 0);
+@media screen and (min-width: 641px) {
+    .header {
+        position: initial;
+    }
+}
 
-  }
+
+/* 上に上がる動き */
+.header.hidden {
+    transform: translate3d(0, -100%, 0);
+}
 
 .header-flex {
     width: 100%;
@@ -453,19 +477,13 @@ a {
 
 /* hero */
 .hero {
-    margin-top: 56px;
+    padding-top: 56px;
     position: relative;
 }
 
-@media screen and (min-width: 641px) and (max-width: 810px) {
+@media screen and (min-width:641px) {
     .hero {
-        margin-top: 76px;
-    }
-}
-
-@media screen and (min-width:811px) {
-    .hero {
-        margin-top: 100px;
+        padding-top: 0;
     }
 }
 
@@ -674,6 +692,12 @@ a {
     overflow: hidden;
 }
 
+@media screen and (min-width:641px) {
+    .popular-products {
+        padding-bottom: 64px;
+    }
+}
+
 h2 {
     font-size: 32px;
     font-weight: 400;
@@ -705,14 +729,14 @@ h2 {
     display: flex;
     justify-content: space-around;
     padding: 0 20px;
+    margin: 0 auto;
 }
 
 @media screen and (min-width:641px) and (max-width: 980px) {
     .popular-menu {
-        width: 70%;
+        width: 80%;
         flex-wrap: wrap;
-        justify-content: center;
-        padding: 0 32px;
+        padding: 0;
     }
 }
 
@@ -725,11 +749,14 @@ h2 {
 
 @media screen and (min-width:641px) and (max-width: 980px) {
     .popular-list {
-        width: 35%;
+        width: 50%;
+        max-width: 250px;
         height: auto;
     }
+}
 
-    /* PC表示 非表示 */
+/* PC表示 非表示 */
+@media screen and (max-width: 1440px) {
     .pc-none {
         display: none;
     }
@@ -761,6 +788,8 @@ h2 {
     font-size: 0.9rem;
     color: #999999;
     position: relative;
+    text-align: center;
+
 }
 
 .more-btn a::after {
@@ -783,7 +812,6 @@ h2 {
 /* news */
 /* about */
 .topics {
-    border: 1px solid #ddd;
 }
 
 .topics-lists {
@@ -791,12 +819,35 @@ h2 {
     margin: 0 auto;
 }
 
+@media screen and (min-width:641px) {
+    .topics-lists {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
 .topics-card {
     text-align: center;
 }
 
+@media screen and (min-width: 641px) {
+    .topics-card {
+        width: calc(33.3% - 24px * 2 / 3);
+        max-width: 320px;
+        height: 350px;
+        text-align: left;
+    }
+}
+
 .topics-card:not(:first-child) {
     margin-top: 48px;
+}
+
+@media screen and (min-width: 641px) {
+    .topics-card:not(:first-child) {
+        margin-top: 0;
+    }
 }
 
 .topics-card img {
@@ -804,8 +855,10 @@ h2 {
     object-fit: cover;
 }
 
-.topics-title {
-
+@media screen and (min-width: 641px) {
+    .topics-title {
+        font-size: 18px;
+    }
 }
 
 .topics-desc {
@@ -814,9 +867,16 @@ h2 {
     padding: 0 26px;
 }
 
+@media screen and (min-width: 641px) {
+    .topics-desc {
+        padding: 0;
+    }
+}
+
+
 /* info */
 .info {
-
+    border-top: 1px solid #ddd;
 }
 
 .inner-s {
@@ -825,6 +885,19 @@ h2 {
 
 .info-container {
     text-align: center;
+}
+
+@media screen and (min-width: 641px) {
+    .info-container {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .info-content {
+        width: 33%;
+        column-gap: 5px;
+    }
 }
 
 .info-sns {
@@ -863,6 +936,12 @@ h2 {
     margin-top: 26px;
 }
 
+@media screen and (min-width: 641px) {
+    .info-mail {
+        margin-top: 0;
+    }
+}
+
 .info-title-icon i {
     font-size: 24px;
     margin-right: 11px;
@@ -883,6 +962,12 @@ h2 {
 
 .info-register {
     margin-top: 56px;
+}
+
+@media screen and (min-width: 641px) {
+    .info-register {
+        margin-top: 0;
+    }
 }
 
 /* notice */
