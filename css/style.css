@@ -82,7 +82,7 @@ a {
 }
 
 .inner-notice {
-    width: 90%;
+    width: 85%;
 }
 
 .footer-inner {
@@ -985,6 +985,14 @@ h2 {
     color: #333;
     border-bottom: 1px solid #898787;
     padding-bottom: 8px;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 641px) {
+    .notice-title {
+        border: none;
+        padding: 0;
+    }
 }
 
 .notice-container {
@@ -993,16 +1001,23 @@ h2 {
 
 .notice-list {
     padding-left: 22px;
-    margin-top: 18px;
-    font-size: 12.8px;
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 1.6;
     color: #333;
     position: relative;
+}
+
+@media screen and (min-width: 641px) {
+    .notice-list {
+        font-size: 14px;
+    }
 }
 
 .notice-list a::before {
     position: absolute;
     content: "";
-    top: 6px;
+    top: 3px;
     left: 0;
     font: var(--fa-font-solid);
     content: "\f138";
@@ -1013,23 +1028,39 @@ h2 {
     margin-top: 16px;
 }
 
+@media screen and (min-width: 641px) {
+    .notice-list:not(:first-child) {
+        margin-top: 9px;
+    }
+}
 /* all-product */
 .all-product {
     background-color: #404040;
     padding: 32px 0;
 }
 
+@media screen and (min-width: 641px) {
+    .all-product {
+        padding-top: 48px;
+    }
+}
+
 .all-product-container {
     width: 90%;
     margin: 0 auto;
     color: #ccc;
-
 }
 
 .all-product-main-title {
     font-size: 20px;
     padding-bottom: 14px;
     border-bottom: 1px solid #666;
+}
+
+@media screen and (min-width: 641px) {
+    .all-product-main-title {
+        display: none;
+    }
 }
 
 .all-p-bb {
@@ -1050,10 +1081,25 @@ h2 {
     display: none;
 }
 
+@media screen and (min-width: 641px) {
+    .accordion-menu {
+        display: block;
+    }
+}
+
 .accordion-title {
     padding: 24px 0 8px 55px;
     cursor: pointer;
     position: relative;
+}
+
+@media screen and (min-width: 641px) {
+    .accordion-title {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 0 8px 0;
+
+    }
 }
 
 
@@ -1077,10 +1123,22 @@ h2 {
     transform: rotate(0deg);
 }
 
+@media screen and (min-width: 641px) {
+    .icon-plus::before,
+    .icon-plus::after {
+        display: none;
+    }
+}
 .accordion-title-ja {
     font-size: 11.2px;
     padding-left: 15px;
     color: #cbcbcb;
+}
+
+@media screen and (min-width: 641px) {
+    .accordion-title-ja {
+        display: none;
+    }
 }
 
 .icon-arrow {
@@ -1141,10 +1199,18 @@ h2 {
 .product-name-ja {
     font-size: 11.2px;
     color: #999;
+    margin-left: 15px;
 }
 
 .accordion-list {
+    display: block;
     padding: 24px 0 0 80px;
+}
+
+@media screen and (min-width: 641px) {
+    .accordion-list {
+        padding: 8px 0 0 64px;
+    }
 }
 
 .accordion-list:last-child {
@@ -1163,13 +1229,54 @@ h2 {
     line-height: 8px;
     margin: 0 0 1px 8px;
 }
+
 /* SP表示 */
+@media screen and (min-width: 641px) {
+    .all-product-sp {
+        display: none;
+    }
+}
 
 
 /* PC表示 */
+@media screen and (min-width: 641px) {
+    .all-product-pc-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .pc-flex {
+        flex: 0 0 32%;
+    }
+
+    .smart-phone {
+        width: 200px;
+    }
+
+    .pc-flex-group {
+        display: flex;
+        column-gap: 20px;
+        margin-top: 16px;
+    }
+
+    .flex-group-wrap {
+        flex-wrap: wrap;
+        column-gap: 200px;
+    }
+}
+
+
 .all-product-pc {
     display: none;
 }
+
+@media screen and (min-width: 641px) {
+    .all-product-pc {
+        display: block;
+    }
+}
+
 
 /* footer */
 .footer {
@@ -1178,19 +1285,60 @@ h2 {
     padding: 42px 0 12px;
 }
 
-.f-menu-container {
+@media screen and (min-width: 641px) {
+    .footer {
+        padding-top: 20px;
+    }
+}
 
+@media screen and (min-width: 641px) {
+    .f-menu-container {
+        display: flex;
+    }
 }
 
 .f-menu-title {
     border-bottom: 1px solid #666;
     padding-bottom: 8px;
     margin-top: 32px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 641px) {
+    .f-menu-title {
+        margin-top: 0;
+        border: none;
+    }
+
+    .mt-mt {
+        margin-top: 20px;
+    }
+}
+
+.news-feed {
+    max-width: 320px;
+    min-width: 320px;
+    overflow: hidden;
+    padding: 30px 28px 0;
+    background: #404040;
+    background-image: -webkit-linear-gradient(top, #404040 0%, #333 200px);
+    background-image: -moz-linear-gradient(top, #404040 0%, #333 200px);
+    background-image: linear-gradient(to bottom, #404040 0%, #333 200px);
+    background-image: -ms-linear-gradient(top, #404040 0%, #333 200px)
 }
 
 .f-news-title {
     font-size: 20px;
 }
+
+@media screen and (min-width: 641px) {
+    .f-news-title {
+        font-size: 30px;
+        color: #FFF;
+    }
+}
+
 
 .f-flex-left {
 }
@@ -1201,35 +1349,74 @@ h2 {
 
 .f-topics-list {
     margin-top: 14px;
-}
-
-.f-topics-list a {
     font-size: 14px;
 }
 
-.f-flex-right {
+@media screen and (min-width: 641px) {
+    .f-topics-list {
+        font-size: 12px;
+        color: #ccc;
+        line-height: 1.3;
+        margin-top: 8px;
+        padding-top: 7px;
+    }
+}
 
+@media screen and (min-width: 641px) {
+    .f-topics-list:not(:first-child) {
+        border-top: 1px solid #666;
+    }
+
+    .f-topics-list:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .f-flex-right {
+        margin: 28px 0 0 50px;
+
+    }
 }
 
 .f-product {
     margin-top: 52px;
 }
 
-.f-menu-title {
+@media screen and (min-width: 641px) {
+    .f-product {
+        margin-top: 0;
+    }
 }
 
-
-.f-menu {
-
+@media screen and (min-width: 641px) {
+    .f-menu {
+        border-top: 1px solid #666;
+        margin-top: 8px;
+    }
 }
 
 .f-menu-list:first-child {
     margin-top: 10px;
 }
 
+@media screen and (min-width: 641px) {
+    .f-menu-list:first-child {
+        margin-top: 16px;
+    }
+}
+
 .f-menu-list {
-    font-size: 12.8px;
+    font-size: 12px;
     color: #ccc;
+}
+
+@media screen and (min-width: 641px) {
+    .f-menu-list {
+        color: #999;
+        line-height: 1.7;
+    }
 }
 
 .f-topics {
@@ -1254,6 +1441,14 @@ h2 {
 
 .footer-container {
     margin-top: 52px;
+}
+
+@media screen and (min-width: 641px) {
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 .f-sns {
