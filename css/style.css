@@ -72,6 +72,7 @@ a {
 }
 
 .inner-info {
+    width: 90%;
     padding: 64px 0 56px;
 }
 
@@ -496,29 +497,22 @@ a {
 @media screen and (min-width:641px) {
     .swiper {
         width: 100%;
-    }
-}
-
-@media screen and (min-width:641px) {
-    .swiper-wrapper {
-        height: 320px;
+        object-fit: cover;
     }
 }
 
 .swiper-slide img {
     width: 100%;
-    height: 819px;
-    object-fit: cover;
 }
 
 @media screen and (min-width:641px) {
     .swiper-slide img {
-        width: 100%;
-        height: auto;
+        aspect-ratio: 2 / 1;
     }
 }
 .hero-slide {
     text-align: center;
+    overflow: hidden;
 }
 
 /* ヒーロー画像 テキスト */
@@ -566,36 +560,36 @@ a {
 
 /* ヒーロー画像 1枚目のテキスト */
 .hero-title1 {
-    font-size: 70px;
+    font-size: 10vw;
 }
 
 /* ヒーロー画像 2枚目のテキスト */
 .hero-title2 {
-    font-size: 46px;
+    font-size: 7vw;
     white-space: nowrap;
 }
 
 /* ヒーロー画像 3枚目のテキスト */
 .hero-title3 {
-    font-size: 40px;
+    font-size: 6.25vw;
     white-space: nowrap;
 }
 
 /* ヒーロー画像 4枚目のテキスト */
 .hero-title4 {
-    font-size: 50px;
+    font-size: 7.81vw;
     white-space: nowrap;
 }
 
 /* ヒーロー画像 5枚目のテキスト */
 .hero-title5 {
-    font-size: 50px;
+    font-size: 7.81vw;
     white-space: nowrap;
 }
 
 /* ヒーロー画像 6枚目のテキスト */
 .hero-title6 {
-    font-size: 50px;
+    font-size: 7.81vw;
     white-space: nowrap;
 }
 
@@ -655,7 +649,7 @@ a {
 
 @media screen and (min-width:641px) {
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-        bottom: -18%;
+        bottom: -16%;
     }
 }
 
@@ -688,7 +682,7 @@ a {
 
 /* popular-products */
 .popular-products {
-    padding: 88px 0 50px;
+    padding: 90px 0 50px;
     overflow: hidden;
 }
 
@@ -811,7 +805,14 @@ h2 {
 /* topics */
 /* news */
 /* about */
-.topics {
+@media screen and (min-width: 641px) {
+    .topics {
+        background-color: #fbfbfb;
+    }
+}
+
+.news {
+    border-top: 1px solid #ddd;
 }
 
 .topics-lists {
@@ -853,6 +854,14 @@ h2 {
 .topics-card img {
     aspect-ratio: 307 / 130;
     object-fit: cover;
+}
+
+@media screen and (min-width: 641px) {
+    .topics-card img {
+        width: 100%;
+        aspect-ratio: auto;
+        object-fit: contain;
+    }
 }
 
 @media screen and (min-width: 641px) {
@@ -1202,6 +1211,12 @@ h2 {
     margin-left: 15px;
 }
 
+@media screen and (min-width: 641px) {
+    .product-name-ja {
+        margin-left: 0;
+    }
+}
+
 .accordion-list {
     display: block;
     padding: 24px 0 0 80px;
@@ -1266,6 +1281,114 @@ h2 {
     }
 }
 
+/* icon */
+@media screen and (min-width: 641px) {
+    .accordion-menu {
+        margin-top: 20px;
+    }
+
+    .accordion-list {
+        position: relative;
+    }
+
+    .accordion-list::before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    /* Kitchen */
+    .icon1::before {
+        background-image: url(../images/icon1.png);
+    }
+
+    .icon2::before {
+        background-image: url(../images/icon1.png);
+    }
+
+    .icon3::before {
+        background-image: url(../images/icon3.png);
+    }
+
+    .icon4::before {
+        background-image: url(../images/icon4.png);
+    }
+
+    .icon5::before {
+        background-image: url(../images/icon5.png);
+    }
+
+    .icon6::before {
+        background-image: url(../images/icon6.png);
+    }
+
+    .icon7::before {
+        background-image: url(../images/icon7.png);
+    }
+
+    .icon8::before {
+        background-image: url(../images/icon8.png);
+    }
+
+    /* Air */
+    .icon9::before {
+        background-image: url(../images/icon9.png);
+    }
+
+    .icon10::before {
+        background-image: url(../images/icon10.png);
+    }
+
+    .icon11::before {
+        background-image: url(../images/icon11.png);
+    }
+
+    /* Lighting */
+    .icon12::before {
+        background-image: url(../images/icon12.png);
+    }
+
+    .icon13::before {
+        background-image: url(../images/icon13.png);
+    }
+
+    /* Cleaner */
+    .icon14::before {
+        background-image: url(../images/icon14.png);
+    }
+
+    /* Audio */
+    .icon15::before {
+        background-image: url(../images/icon15.png);
+    }
+
+    /* Smart Phone */
+    .icon16::before {
+        background-image: url(../images/icon16.png);
+    }
+
+    /* Recipe */
+    .icon7::before {
+        background-image: url(../images/icon7.png);
+    }
+
+    /* 消耗品・専用パーツ */
+
+    .icon17::before {
+        background-image: url(../images/icon17.png);
+    }
+
+    /* all-product PC表示 余白*/
+    .al-mt {
+        margin-top: 20px;
+    }
+}
 
 .all-product-pc {
     display: none;
@@ -1316,16 +1439,18 @@ h2 {
     }
 }
 
-.news-feed {
-    max-width: 320px;
-    min-width: 320px;
-    overflow: hidden;
-    padding: 30px 28px 0;
-    background: #404040;
-    background-image: -webkit-linear-gradient(top, #404040 0%, #333 200px);
-    background-image: -moz-linear-gradient(top, #404040 0%, #333 200px);
-    background-image: linear-gradient(to bottom, #404040 0%, #333 200px);
-    background-image: -ms-linear-gradient(top, #404040 0%, #333 200px)
+@media screen and (min-width: 641px) {
+    .news-feed {
+        max-width: 320px;
+        min-width: 320px;
+        overflow: hidden;
+        padding: 30px 28px 0;
+        background: #404040;
+        background-image: -webkit-linear-gradient(top, #404040 0%, #333 200px);
+        background-image: -moz-linear-gradient(top, #404040 0%, #333 200px);
+        background-image: linear-gradient(to bottom, #404040 0%, #333 200px);
+        background-image: -ms-linear-gradient(top, #404040 0%, #333 200px)
+    }
 }
 
 .f-news-title {
@@ -1446,8 +1571,9 @@ h2 {
 @media screen and (min-width: 641px) {
     .footer-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        margin-top: 70px;
     }
 }
 
@@ -1460,6 +1586,15 @@ h2 {
     color: #fff;
     font-size: 30px;
     margin: 0 10px;
+}
+
+@media screen and (min-width: 641px) {
+    .f-sns-list i {
+        font-size: 36px;
+        line-height: 50px;
+        margin-right: 0;
+        margin-left: 35px;
+    }
 }
 
 .f-logo {
@@ -1476,8 +1611,19 @@ h2 {
     margin-top: 40px;
 }
 
-.f-link-menu {
+@media screen and (min-width: 641px) {
+    .f-link-container {
+        width: 80%;
+        margin-left: auto;
+    }
+}
 
+@media screen and (min-width: 641px) {
+    .f-link-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
 }
 
 .f-link-list a {
@@ -1487,11 +1633,31 @@ h2 {
     color: #999;
 }
 
+@media screen and (min-width: 641px) {
+    .f-link-list {
+        margin-left: 12px;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .f-link-list a {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+}
+
 .copyright {
     display: block;
     margin-top: 28px;
     font-size: 10px;
     text-align: center;
+}
+
+@media screen and (min-width: 641px) {
+    .copyright {
+        margin: 13px 0;
+        text-align: right;
+    }
 }
 
 /* information */
@@ -1503,9 +1669,21 @@ h2 {
     background-color: #fff;
 }
 
+@media screen and (min-width: 641px) {
+    .information {
+        justify-content: center;
+    }
+}
+
 .information i {
     font-size: 20px;
     color: #039be5;
+}
+
+@media screen and (min-width: 641px) {
+    .information i {
+        font-size: 24px;
+    }
 }
 
 .information-desc {
@@ -1513,6 +1691,14 @@ h2 {
     font-size: 12px;
     text-align: center;
 }
+
+@media screen and (min-width: 641px) {
+    .information-desc {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}
+
 
 .information-btn {
     width: 72px;
@@ -1525,3 +1711,11 @@ h2 {
     color: #fff;
 }
 
+@media screen and (min-width: 641px) {
+    .information-btn {
+        width: 98px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 15px;
+    }
+}
