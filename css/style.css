@@ -185,15 +185,20 @@ a {
 
 .header-logo img{
     width: 113px;
-    height: 23px;
+}
+
+@media screen and (min-width: 641px) {
+    .header-logo img{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 641px) and (max-width: 810px) {
     /* ロゴ */
     .header-logo {
-        width: 174px;
-        text-align: center;
+        width: 160px;
         order: 1;
+        line-height: 28px;
     }
 }
 
@@ -201,7 +206,7 @@ a {
     /* ロゴ */
     .header-logo {
         width: 210px;
-        text-align: center;
+        line-height: 28px;
     }
 }
 
@@ -353,7 +358,7 @@ a {
 
 @media screen and (min-width: 641px) and (max-width: 810px) {
     .header-pc {
-        width: calc(100% - 174px);
+        width: calc(100% - 170px);
     }
 }
 
@@ -382,20 +387,18 @@ a {
     position: relative;
 }
 
-@media screen and (min-width:811px) {
-    .header-list a {
-        font-size: 15px;
-    }
-}
-
 @media screen and (min-width: 641px) and (max-width: 810px) {
     .header-list a {
         font-size: 12px;
+        line-height: 28px;
     }
 }
 
-.header-list:nth-child(5) a {
-    font-size: 14px;
+@media screen and (min-width: 811px) {
+    .header-list a {
+        font-size: 16px;
+        line-height: 31px;
+    }
 }
 
 .header-list a:hover {
@@ -532,6 +535,12 @@ a {
     white-space: nowrap;
 }
 
+@media screen and (min-width: 641px) {
+    .hero-tag {
+
+    }
+}
+
 .tag-fff {
     color: #fff;
     border: 1px solid #fff;
@@ -560,36 +569,36 @@ a {
 
 /* ヒーロー画像 1枚目のテキスト */
 .hero-title1 {
-    font-size: 10vw;
+    font-size: clamp(16px, 10vw, 74px);
 }
 
 /* ヒーロー画像 2枚目のテキスト */
 .hero-title2 {
-    font-size: 7vw;
+    font-size: clamp(16px, 7vw, 50px);
     white-space: nowrap;
 }
 
 /* ヒーロー画像 3枚目のテキスト */
 .hero-title3 {
-    font-size: 6.25vw;
+    font-size: clamp(16px, 6.25vw, 40px);
     white-space: nowrap;
 }
 
 /* ヒーロー画像 4枚目のテキスト */
 .hero-title4 {
-    font-size: 7.81vw;
+    font-size: clamp(16px, 7.81vw, 46px);
     white-space: nowrap;
 }
 
 /* ヒーロー画像 5枚目のテキスト */
 .hero-title5 {
-    font-size: 7.81vw;
+    font-size: clamp(16px, 7.81vw, 46px);
     white-space: nowrap;
 }
 
 /* ヒーロー画像 6枚目のテキスト */
 .hero-title6 {
-    font-size: 7.81vw;
+    font-size: clamp(16px, 7.81vw, 46px);
     white-space: nowrap;
 }
 
