@@ -21,6 +21,7 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    vertical-align:top;
 }
 
 ul,
@@ -78,12 +79,12 @@ a {
 
 @media screen and (min-width: 641px) {
     .inner-info {
-        padding: 56px 24px;
+        padding: 56px 0;
     }
 }
 
 .inner-notice {
-    width: 85%;
+    width: 90%;
 }
 
 .footer-inner {
@@ -146,6 +147,7 @@ a {
 /* 上に上がる動き */
 .header.hidden {
     transform: translate3d(0, -100%, 0);
+    box-shadow: none;
 }
 
 .header-flex {
@@ -162,6 +164,7 @@ a {
         height: 76px;
         padding: 0;
         background-color: #202020;
+
     }
 }
 
@@ -177,36 +180,32 @@ a {
 .header-logo {
     /* flex 順番入れ替え */
     order: 2;
+    text-align: center;
 }
 
-.header-logo a {
+.header-logo img {
     display: block;
-}
-
-.header-logo img{
     width: 113px;
 }
 
 @media screen and (min-width: 641px) {
-    .header-logo img{
-        width: 100%;
+    .header-logo a {
+        align-items: center;
     }
-}
 
-@media screen and (min-width: 641px) and (max-width: 810px) {
-    /* ロゴ */
-    .header-logo {
-        width: 160px;
-        order: 1;
-        line-height: 28px;
+    .header-logo img{
+        width: 110px;
+        height: 28px;
+        margin: 0 auto;
+        align-items: center;
+
     }
 }
 
 @media screen and (min-width:811px) {
     /* ロゴ */
-    .header-logo {
-        width: 210px;
-        line-height: 28px;
+    .header-logo img {
+        width: 100%;
     }
 }
 
@@ -505,7 +504,7 @@ a {
 }
 
 .swiper-slide img {
-    width: 100%;
+    aspect-ratio: 25 / 32;
 }
 
 @media screen and (min-width:641px) {
@@ -522,7 +521,7 @@ a {
 .hero-text {
     position: absolute;
     content: "";
-    top: 10%;
+    top: 13%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -530,14 +529,15 @@ a {
 /* ヒーロー画像 タグ 四角 */
 .hero-tag {
     display: inline-block;
-    font-size: 24px;
-    padding: 5px 40px;
+    font-size: 18px;
+    padding: 2px 30px;
     white-space: nowrap;
 }
 
 @media screen and (min-width: 641px) {
     .hero-tag {
-
+        font-size: 16px;
+        padding: 2px 20px;
     }
 }
 
@@ -570,6 +570,13 @@ a {
 /* ヒーロー画像 1枚目のテキスト */
 .hero-title1 {
     font-size: clamp(16px, 10vw, 74px);
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 641px) {
+    .hero-title1 {
+        margin-top: 0;
+    }
 }
 
 /* ヒーロー画像 2枚目のテキスト */
@@ -582,6 +589,7 @@ a {
 .hero-title3 {
     font-size: clamp(16px, 6.25vw, 40px);
     white-space: nowrap;
+    margin-top: 15px;
 }
 
 /* ヒーロー画像 4枚目のテキスト */
@@ -609,8 +617,9 @@ a {
     left: 50%;
     transform: translateX(-50%);
     width: 150px;
-    padding: 8px 0;
+    padding: 0.4vw 0;
     margin: 0 auto;
+    font-size: 1.3vw;
     color: #000;
     background-color: rgba(255,255,255,.7);
     border-radius: 200px;
@@ -622,8 +631,9 @@ a {
     left: 50%;
     transform: translateX(-50%);
     width: 150px;
-    padding: 8px 0;
+    padding: 0.4vw 0;
     margin: 0 auto;
+    font-size: 1.3vw;
     color: #fff;
     background-color: rgba(23,18,18,.5);
     border-radius: 200px;
@@ -631,8 +641,12 @@ a {
 
 @media screen and (min-width:641px) {
     .hero-btn {
-        width: 130px;
+        width: 11.6vw;
         transition: all 0.2s ease;
+    }
+
+    .hero-btn-bg {
+        width: 11.6vw;
     }
 
     .hero-btn:hover {
@@ -644,21 +658,25 @@ a {
     bottom: 8%;
 }
 
+@media screen and (min-width:641px) {
+    .btn-bottom {
+        bottom: 13%;
+    }
+}
+
 .btn-top {
     top: 25%;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-    position: absolute;
-    content: "";
-    bottom: -5%;
-    left: 0;
-    padding-top: 10px;
+    top: 100%;
+    margin-top: 15px;
 }
 
 @media screen and (min-width:641px) {
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
         bottom: -16%;
+        margin-top: 20px;
     }
 }
 
@@ -691,7 +709,8 @@ a {
 
 /* popular-products */
 .popular-products {
-    padding: 90px 0 50px;
+    padding: 0 0 50px;
+    margin-top: 100px;
     overflow: hidden;
 }
 
@@ -737,9 +756,15 @@ h2 {
 
 @media screen and (min-width:641px) and (max-width: 980px) {
     .popular-menu {
-        width: 80%;
+        width: 70%;
         flex-wrap: wrap;
         padding: 0;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .popular-menu {
+        width: 100%;
     }
 }
 
@@ -759,7 +784,11 @@ h2 {
 }
 
 /* PC表示 非表示 */
-@media screen and (max-width: 1440px) {
+.pc-none {
+    display: block;
+}
+
+@media screen and (min-width: 641px) {
     .pc-none {
         display: none;
     }
@@ -777,9 +806,15 @@ h2 {
 }
 
 .p-product-name-ja {
-    font-size: 0.9rem;
+    font-size: 14.4px;
     color: #999999;
     margin: 0;
+}
+
+@media screen and (min-width: 641px) {
+    .p-product-name-ja {
+        font-size: 11.2px;
+    }
 }
 
 .more-btn {
@@ -825,7 +860,7 @@ h2 {
 }
 
 .topics-lists {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -843,10 +878,11 @@ h2 {
 
 @media screen and (min-width: 641px) {
     .topics-card {
-        width: calc(33.3% - 24px * 2 / 3);
+        width: 32%;
         max-width: 320px;
         height: 350px;
         text-align: left;
+        line-height: 1.5;
     }
 }
 
@@ -862,7 +898,7 @@ h2 {
 
 .topics-card img {
     aspect-ratio: 307 / 130;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 @media screen and (min-width: 641px) {
@@ -876,6 +912,7 @@ h2 {
 @media screen and (min-width: 641px) {
     .topics-title {
         font-size: 18px;
+        margin-top: 24px;
     }
 }
 
@@ -888,6 +925,7 @@ h2 {
 @media screen and (min-width: 641px) {
     .topics-desc {
         padding: 0;
+        margin-top: 8px;
     }
 }
 
@@ -934,6 +972,7 @@ h2 {
 }
 
 .sns-icons {
+    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -951,7 +990,7 @@ h2 {
 }
 
 .info-mail {
-    margin-top: 26px;
+    margin-top: 56px;
 }
 
 @media screen and (min-width: 641px) {
@@ -978,6 +1017,14 @@ h2 {
     margin-top: 11px;
 }
 
+@media screen and (min-width: 641px) {
+    .info-btn {
+        border: 1px solid #999;
+        color: #999;
+        font-size: 14.4px;
+    }
+}
+
 .info-register {
     margin-top: 56px;
 }
@@ -999,7 +1046,7 @@ h2 {
 }
 
 .notice-title {
-    font-size: 0.9em;
+    font-size: 12.8px;
     color: #333;
     border-bottom: 1px solid #898787;
     padding-bottom: 8px;
@@ -1020,7 +1067,7 @@ h2 {
 .notice-list {
     padding-left: 22px;
     margin-top: 13px;
-    font-size: 12px;
+    font-size: 12.8px;
     line-height: 1.6;
     color: #333;
     position: relative;
@@ -1119,7 +1166,6 @@ h2 {
 
     }
 }
-
 
 .icon-plus::before,
 .icon-plus::after {
@@ -1284,6 +1330,10 @@ h2 {
         margin-top: 16px;
     }
 
+    .pc-flex-group:nth-child(2) {
+        margin-top: 46px;
+    }
+
     .flex-group-wrap {
         flex-wrap: wrap;
         column-gap: 200px;
@@ -1291,106 +1341,113 @@ h2 {
 }
 
 /* icon */
+.accordion-list {
+    position: relative;
+}
+
+.accordion-list::before {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+@media screen and (min-width: 641px) {
+    .accordion-list::before {
+        width: 40px;
+        height: 40px;
+        left: 0;
+    }
+}
+
+/* Kitchen */
+.icon1::before {
+    background-image: url(../images/icon1.png);
+}
+
+.icon2::before {
+    background-image: url(../images/icon1.png);
+}
+
+.icon3::before {
+    background-image: url(../images/icon3.png);
+}
+
+.icon4::before {
+    background-image: url(../images/icon4.png);
+}
+
+.icon5::before {
+    background-image: url(../images/icon5.png);
+}
+
+.icon6::before {
+    background-image: url(../images/icon6.png);
+}
+
+.icon7::before {
+    background-image: url(../images/icon7.png);
+}
+
+.icon8::before {
+    background-image: url(../images/icon8.png);
+}
+
+/* Air */
+.icon9::before {
+    background-image: url(../images/icon9.png);
+}
+
+.icon10::before {
+    background-image: url(../images/icon10.png);
+}
+
+.icon11::before {
+    background-image: url(../images/icon11.png);
+}
+
+/* Lighting */
+.icon12::before {
+    background-image: url(../images/icon12.png);
+}
+
+.icon13::before {
+    background-image: url(../images/icon13.png);
+}
+
+/* Cleaner */
+.icon14::before {
+    background-image: url(../images/icon14.png);
+}
+
+/* Audio */
+.icon15::before {
+    background-image: url(../images/icon15.png);
+}
+
+/* Smart Phone */
+.icon16::before {
+    background-image: url(../images/icon16.png);
+}
+
+/* Recipe */
+.icon7::before {
+    background-image: url(../images/icon7.png);
+}
+
+/* 消耗品・専用パーツ */
+
+.icon17::before {
+    background-image: url(../images/icon17.png);
+}
 @media screen and (min-width: 641px) {
     .accordion-menu {
         margin-top: 20px;
-    }
-
-    .accordion-list {
-        position: relative;
-    }
-
-    .accordion-list::before {
-        position: absolute;
-        content: "";
-        width: 40px;
-        height: 40px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
-
-    /* Kitchen */
-    .icon1::before {
-        background-image: url(../images/icon1.png);
-    }
-
-    .icon2::before {
-        background-image: url(../images/icon1.png);
-    }
-
-    .icon3::before {
-        background-image: url(../images/icon3.png);
-    }
-
-    .icon4::before {
-        background-image: url(../images/icon4.png);
-    }
-
-    .icon5::before {
-        background-image: url(../images/icon5.png);
-    }
-
-    .icon6::before {
-        background-image: url(../images/icon6.png);
-    }
-
-    .icon7::before {
-        background-image: url(../images/icon7.png);
-    }
-
-    .icon8::before {
-        background-image: url(../images/icon8.png);
-    }
-
-    /* Air */
-    .icon9::before {
-        background-image: url(../images/icon9.png);
-    }
-
-    .icon10::before {
-        background-image: url(../images/icon10.png);
-    }
-
-    .icon11::before {
-        background-image: url(../images/icon11.png);
-    }
-
-    /* Lighting */
-    .icon12::before {
-        background-image: url(../images/icon12.png);
-    }
-
-    .icon13::before {
-        background-image: url(../images/icon13.png);
-    }
-
-    /* Cleaner */
-    .icon14::before {
-        background-image: url(../images/icon14.png);
-    }
-
-    /* Audio */
-    .icon15::before {
-        background-image: url(../images/icon15.png);
-    }
-
-    /* Smart Phone */
-    .icon16::before {
-        background-image: url(../images/icon16.png);
-    }
-
-    /* Recipe */
-    .icon7::before {
-        background-image: url(../images/icon7.png);
-    }
-
-    /* 消耗品・専用パーツ */
-
-    .icon17::before {
-        background-image: url(../images/icon17.png);
     }
 
     /* all-product PC表示 余白*/
@@ -1432,9 +1489,9 @@ h2 {
 .f-menu-title {
     border-bottom: 1px solid #666;
     padding-bottom: 8px;
-    margin-top: 32px;
     color: #ccc;
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 32px;
 }
 
 @media screen and (min-width: 641px) {
@@ -1464,6 +1521,9 @@ h2 {
 
 .f-news-title {
     font-size: 20px;
+    margin-top: 0;
+    color: #a5a5a5;
+    padding-bottom: 14px;
 }
 
 @media screen and (min-width: 641px) {
@@ -1542,7 +1602,7 @@ h2 {
 }
 
 .f-menu-list {
-    font-size: 12px;
+    font-size: 12.8px;
     color: #ccc;
 }
 
@@ -1574,7 +1634,7 @@ h2 {
 }
 
 .footer-container {
-    margin-top: 52px;
+    margin-top: 55px;
 }
 
 @media screen and (min-width: 641px) {
@@ -1594,26 +1654,38 @@ h2 {
 .f-sns-list i {
     color: #fff;
     font-size: 30px;
+    line-height: 50px;
     margin: 0 10px;
 }
 
 @media screen and (min-width: 641px) {
     .f-sns-list i {
-        font-size: 36px;
+        font-size: 34px;
         line-height: 50px;
         margin-right: 0;
-        margin-left: 35px;
+    }
+
+    .f-sns-list:not(:first-child) {
+        margin-left: 18px;
     }
 }
 
 .f-logo {
     margin-top: 23px;
-    text-align: center;
+    margin-left: auto;
 }
 
 .f-logo img {
-    width: 135px;
+    width: 100%;
     height: 28px;
+}
+
+@media screen and (min-width: 641px) {
+    .f-logo img {
+        width: 100%;
+        max-width: 174px;
+        height: 36px;
+    }
 }
 
 .f-link-container {
@@ -1671,10 +1743,12 @@ h2 {
 
 /* information */
 .information {
+    width: 90%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 15px 0;
+    margin: 0 auto;
     background-color: #fff;
 }
 
