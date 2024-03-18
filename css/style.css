@@ -58,7 +58,6 @@ a {
 
 .inner-s {
     max-width: 980px;
-    width: 100%;
     margin: 0 auto;
 }
 
@@ -69,6 +68,13 @@ a {
 @media screen and (min-width: 641px) {
     .inner-topics {
         padding: 64px 0 0;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .inner-topics {
+        width: 100%;
+        max-width: 980px;
     }
 }
 
@@ -91,6 +97,12 @@ a {
     width: 90%;
     margin: 0 auto;
 }
+@media screen and (min-width: 981px) {
+    .footer-inner {
+        width: 100%;
+    }
+}
+
 
 /* topics newsとaboutの間の線 */
 .line {
@@ -140,6 +152,7 @@ a {
 @media screen and (min-width: 641px) {
     .header {
         position: initial;
+        box-shadow: none;
     }
 }
 
@@ -183,6 +196,19 @@ a {
     text-align: center;
 }
 
+@media screen and (min-width: 641px) {
+    .header-logo {
+        width: 170px;
+    }
+}
+
+@media screen and (min-width: 811px) {
+    .header-logo {
+        width: 210px;
+    }
+}
+
+
 .header-logo img {
     display: block;
     width: 113px;
@@ -205,7 +231,7 @@ a {
 @media screen and (min-width:811px) {
     /* ロゴ */
     .header-logo img {
-        width: 100%;
+        width: 128px;
     }
 }
 
@@ -872,6 +898,12 @@ h2 {
     }
 }
 
+@media screen and (min-width:641px) {
+    .topics-lists {
+        width: 100%;
+    }
+}
+
 .topics-card {
     text-align: center;
 }
@@ -1163,7 +1195,7 @@ h2 {
         font-size: 18px;
         font-weight: 700;
         padding: 0 0 8px 0;
-
+        color: #fff;
     }
 }
 
@@ -1340,6 +1372,12 @@ h2 {
     }
 }
 
+@media screen and (min-width: 654px) {
+    .flex-group-wrap {
+        column-gap: 20px;
+    }
+}
+
 /* icon */
 .accordion-list {
     position: relative;
@@ -1466,6 +1504,46 @@ h2 {
     }
 }
 
+/* 981px以上の表示 */
+@media screen and (max-width: 980px) {
+    .sp-none {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .sp-none {
+        display: block;
+    }
+
+    .all-product-pc {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .kitchen {
+        order: 1;
+    }
+
+    .air {
+        order: 2;
+    }
+
+    .cleaner{
+        order: 3;
+    }
+
+    .lighting {
+        order: 4;
+    }
+
+
+}
+
+
+
+
 
 /* footer */
 .footer {
@@ -1483,6 +1561,12 @@ h2 {
 @media screen and (min-width: 641px) {
     .f-menu-container {
         display: flex;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .f-menu-container {
+        justify-content: space-between;
     }
 }
 
@@ -1574,6 +1658,28 @@ h2 {
     }
 }
 
+@media screen and (min-width: 981px) {
+    .f-flex-right {
+        display: flex;
+        flex: auto;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 981px) {
+    .f-flex-content {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .f-flex-width {
+        width: 280px;
+    }
+}
+
+
 .f-product {
     margin-top: 52px;
 }
@@ -1651,6 +1757,12 @@ h2 {
     justify-content: center;
 }
 
+@media screen and (min-width: 981px) {
+    .f-sns {
+        margin-left: 28px;
+    }
+}
+
 .f-sns-list i {
     color: #fff;
     font-size: 30px;
@@ -1670,9 +1782,16 @@ h2 {
     }
 }
 
+
 .f-logo {
     margin-top: 23px;
     margin-left: auto;
+}
+
+@media screen and (min-width: 641px) {
+    .f-logo {
+        margin-top: 0;
+    }
 }
 
 .f-logo img {
@@ -1688,6 +1807,13 @@ h2 {
     }
 }
 
+@media screen and (min-width: 981px) {
+    .f-logo img {
+        height: 50px;
+    }
+}
+
+
 .f-link-container {
     margin-top: 40px;
 }
@@ -1696,6 +1822,15 @@ h2 {
     .f-link-container {
         width: 80%;
         margin-left: auto;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .f-link-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -1704,6 +1839,13 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: end;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .f-link-menu {
+        flex-wrap: nowrap;
+        margin-left: 28px;
     }
 }
 
@@ -1738,6 +1880,12 @@ h2 {
     .copyright {
         margin: 13px 0;
         text-align: right;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .copyright {
+        margin: 0;
     }
 }
 
