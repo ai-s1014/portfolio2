@@ -128,7 +128,7 @@ a {
 }
 
 .square-fz {
-    font-size: 36px;
+    font-size: 24px;
 }
 
 /* popular-list タイトル span */
@@ -555,7 +555,7 @@ a {
 /* ヒーロー画像 タグ 四角 */
 .hero-tag {
     display: inline-block;
-    font-size: 18px;
+    font-size: 20px;
     padding: 2px 30px;
     white-space: nowrap;
 }
@@ -583,6 +583,7 @@ a {
     font-weight: 700;
     letter-spacing: 2px;
     margin: 0;
+    position: relative;
 }
 
 .hero-title-fff {
@@ -643,12 +644,11 @@ a {
     left: 50%;
     transform: translateX(-50%);
     width: 150px;
-    padding: 0.4vw 0;
-    margin: 0 auto;
-    font-size: 1.3vw;
+    padding: 5px 0;
+    text-align: center;
     color: #000;
     background-color: rgba(255,255,255,.7);
-    border-radius: 200px;
+    border-radius: 19px;
 }
 
 .hero-btn-bg {
@@ -657,20 +657,23 @@ a {
     left: 50%;
     transform: translateX(-50%);
     width: 150px;
-    padding: 0.4vw 0;
-    margin: 0 auto;
-    font-size: 1.3vw;
+    padding: 5px 0;
+    text-align: center;
     color: #fff;
     background-color: rgba(23,18,18,.5);
-    border-radius: 200px;
+    border-radius: 19px;
 }
 
 @media screen and (min-width:641px) {
     .hero-btn {
         width: 11.6vw;
+        padding: 0.4vw 0;
+        font-size: 1.3vw;
+        border-radius: 200px;
         transition: all 0.2s ease;
     }
 
+    
     .hero-btn-bg {
         width: 11.6vw;
     }
@@ -692,6 +695,12 @@ a {
 
 .btn-top {
     top: 25%;
+}
+
+@media screen and (min-width:641px) {
+    .btn-top {
+        top: 35%;
+    }
 }
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -941,6 +950,10 @@ h2 {
     }
 }
 
+.topics-title {
+    margin-top: 16px;
+}
+
 @media screen and (min-width: 641px) {
     .topics-title {
         font-size: 18px;
@@ -994,7 +1007,7 @@ h2 {
 
 .info-title {
     color: #333;
-    line-height: 2;
+    line-height: 1.5;
 }
 
 .info-desc {
@@ -1148,6 +1161,12 @@ h2 {
     color: #ccc;
 }
 
+@media screen and (min-width: 981px) {
+    .all-product-container {
+        width: 100%;
+    }
+}
+
 .all-product-main-title {
     font-size: 20px;
     padding-bottom: 14px;
@@ -1199,6 +1218,56 @@ h2 {
     }
 }
 
+.title-icon {
+    position: relative;
+}
+
+.title-icon::before {
+    position: absolute;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+}
+
+.title-icon1::before {
+    background-image: url(../images/icon1.png);
+}
+
+.title-icon2::before {
+    background-image: url(../images/icon9.png);
+}
+
+.title-icon3::before {
+    background-image: url(../images/icon13.png);
+}
+
+.title-icon4::before {
+    background-image: url(../images/icon14.png);
+}
+
+.title-icon5::before {
+    background-image: url(../images/icon7.png);
+}
+
+.title-icon6::before {
+    background-image: url(../images/icon17.png);
+}
+
+.title-icon7::before {
+    background-image: url(../images/icon16.png);
+}
+
+@media screen and (min-width: 641px) {
+    .title-icon {
+        display: none;
+    }
+}
+
 .icon-plus::before,
 .icon-plus::after {
     position: absolute;
@@ -1225,6 +1294,7 @@ h2 {
         display: none;
     }
 }
+
 .accordion-title-ja {
     font-size: 11.2px;
     padding-left: 15px;
@@ -1309,8 +1379,9 @@ h2 {
     padding: 24px 0 0 80px;
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 981px) {
     .accordion-list {
+        height: 72px;
         padding: 8px 0 0 64px;
     }
 }
@@ -1320,7 +1391,13 @@ h2 {
 }
 
 .new {
-    display: inline-block;
+    position: relative;
+}
+
+.new::before,
+.new::after {
+    position: absolute;
+    content: "NEW";
     width: 32px;
     font-size: 8px;
     color: #333;
@@ -1329,7 +1406,27 @@ h2 {
     text-align: center;
     padding: 1px 0;
     line-height: 8px;
+}
+
+.new::before {
+    display: none;
+}
+
+.new::after {
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0 0 1px 8px;
+}
+
+@media screen and (min-width: 641px) {
+    .new::after {
+        display: none;
+    }
+
+    .new::before {
+        display: block;
+        top: -25%;
+    }
 }
 
 /* SP表示 */
@@ -1368,7 +1465,7 @@ h2 {
 
     .flex-group-wrap {
         flex-wrap: wrap;
-        column-gap: 200px;
+        column-gap: 236px;
     }
 }
 
@@ -1378,6 +1475,7 @@ h2 {
     }
 }
 
+
 /* icon */
 .accordion-list {
     position: relative;
@@ -1386,8 +1484,8 @@ h2 {
 .accordion-list::before {
     position: absolute;
     content: "";
-    width: 36px;
-    height: 36px;
+    width: 33px;
+    height: 33px;
     background-repeat: no-repeat;
     background-size: contain;
     top: 50%;
@@ -1522,22 +1620,33 @@ h2 {
 }
 
 @media screen and (min-width: 981px) {
-    .kitchen {
-        order: 1;
+    .lighting-flex {
+        width: 480px;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .air {
+    .pc-flex {
+        flex: none;
+    }
+
+    .lighting-pc {
         order: 2;
     }
 
-    .cleaner{
-        order: 3;
+    .cleaner-pc {
+        order: 1;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .recipe {
+        margin-top: 83px;
     }
 
-    .lighting {
-        order: 4;
+    .supplies {
+        margin-top: 213px;
     }
-
 
 }
 
@@ -1786,6 +1895,7 @@ h2 {
 .f-logo {
     margin-top: 23px;
     margin-left: auto;
+    text-align: center;
 }
 
 @media screen and (min-width: 641px) {
@@ -1795,7 +1905,7 @@ h2 {
 }
 
 .f-logo img {
-    width: 100%;
+    width: 128px;
     height: 28px;
 }
 

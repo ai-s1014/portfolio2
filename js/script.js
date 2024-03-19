@@ -34,6 +34,8 @@ if (window.innerWidth <= 641) {
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
+    speed: 500,
+    
 
     // If we need pagination
     pagination: {
@@ -46,4 +48,14 @@ const swiper = new Swiper('.swiper', {
 $('.accordion-title').click(function(){
   $(this).siblings('.accordion-menu').stop().slideToggle();
   $(this).toggleClass('active');
+});
+
+// wow
+// 要素スクロール表示
+window.addEventListener('scroll', function(e) {
+  if( $(window).scrollTop() <= 50) {
+      $('.wow').removeClass('animated');
+      $('.wow').removeAttr('style');
+      new WOW().init();
+  }
 });
