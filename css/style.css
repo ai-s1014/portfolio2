@@ -264,7 +264,7 @@ a {
 .drawer-icon-bar3 {
     position: absolute;
     width: 18px;
-    height: 1px;
+    height: 2px;
     background-color: #fff;
     border-radius: 1px;
     top: 0;
@@ -304,7 +304,7 @@ a {
     height: 100%;
     top: 56px;
     left: 0;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     z-index: 100;
 
     /* drawer-nav 非表示 */
@@ -351,7 +351,7 @@ a {
     height: 100vh;
     top: 56px;
     left: 0;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     transform: translateX(-100%);
 }
 
@@ -878,6 +878,12 @@ h2 {
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .pc-none {
+        display: block;
+    }
+}
+
 .popular-list img {
     width: 100%;
     vertical-align: bottom;
@@ -970,6 +976,7 @@ h2 {
 
 .topics-card {
     text-align: center;
+    margin: 0 25px;
 }
 
 @media screen and (min-width: 641px) {
@@ -993,8 +1000,8 @@ h2 {
 }
 
 .topics-card img {
-    aspect-ratio: 307 / 130;
-    object-fit: fill;
+    aspect-ratio: 524 / 221;
+    object-fit: cover;
 }
 
 @media screen and (min-width: 641px) {
@@ -1121,7 +1128,7 @@ h2 {
     height: 32px;
     border: 1px solid #666;
     border-radius: 16px;
-    font-size: 16px;
+    font-size: 14.4px;
     line-height: 32px;
     text-align: center;
     color: #666;
@@ -1434,13 +1441,6 @@ h2 {
 .product-name-ja {
     font-size: 11.2px;
     color: #999;
-    margin-left: 15px;
-}
-
-@media screen and (min-width: 641px) {
-    .product-name-ja {
-        margin-left: 0;
-    }
 }
 
 .accordion-list {
@@ -1553,13 +1553,12 @@ h2 {
 .accordion-list::before {
     position: absolute;
     content: "";
-    width: 33px;
-    height: 33px;
+    width: 30px;
+    height: 30px;
     background-repeat: no-repeat;
     background-size: contain;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
+    top: 49%;
+    left: 40px;
 }
 
 @media screen and (min-width: 641px) {
