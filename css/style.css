@@ -38,8 +38,11 @@ h4,
 h5,
 h6,
 p {
+    display: block;
     padding: 0;
     margin: 0;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 a {
@@ -67,6 +70,7 @@ a {
 
 @media screen and (min-width: 641px) {
     .inner-topics {
+        width: 90%;
         padding: 64px 0 0;
     }
 }
@@ -428,7 +432,6 @@ a {
 
 .header-list a {
     letter-spacing: 0.05em;
-    font-weight: 700;
     color: #ccc;
     position: relative;
 }
@@ -573,6 +576,16 @@ a {
     transform: translateX(-50%);
 }
 
+@media screen and (min-width: 641px) {
+    .hero-text-right {
+        position: absolute;
+        content: "";
+        top: 41%;
+        right: 1%;
+        transform: translateY(-55%);
+    }
+}
+
 /* ヒーロー画像 タグ 四角 */
 .hero-tag {
     display: inline-block;
@@ -601,7 +614,6 @@ a {
 /* ヒーロー画像 タイトル  */
 .hero-title {
     width: 100%;
-    font-weight: 700;
     letter-spacing: 2px;
     margin: 0;
     position: relative;
@@ -617,7 +629,7 @@ a {
 
 /* ヒーロー画像 1枚目のテキスト */
 .hero-title1 {
-    font-size: clamp(16px, 10vw, 74px);
+    font-size: clamp(16px, 7vw, 74px);
     margin-top: 20px;
 }
 
@@ -654,7 +666,7 @@ a {
 
 /* ヒーロー画像 6枚目のテキスト */
 .hero-title6 {
-    font-size: clamp(16px, 7.81vw, 46px);
+    font-size: clamp(16px, 5vw, 46px);
     white-space: nowrap;
 }
 
@@ -686,7 +698,8 @@ a {
 }
 
 @media screen and (min-width:641px) {
-    .hero-btn {
+    .hero-btn,
+    .hero-btn-bg {
         width: 11.6vw;
         padding: 0.4vw 0;
         font-size: 1.3vw;
@@ -694,13 +707,9 @@ a {
         transition: all 0.2s ease;
     }
 
-    
-    .hero-btn-bg {
-        width: 11.6vw;
-    }
-
-    .hero-btn:hover {
-        width: 145px;
+    .hero-btn:hover,
+    .hero-btn-bg:hover {
+        width: 13vw;
     }
 }
 
@@ -721,6 +730,25 @@ a {
 @media screen and (min-width:641px) {
     .btn-top {
         top: 35%;
+    }
+}
+
+/* PC用ボタン */
+.btn-pc {
+    display: none;
+}
+
+@media screen and (min-width: 641px) {
+    .btn-pc {
+        display: block;
+    }
+
+    .btn-sp {
+        display: none;
+    }
+
+    .btn-right {
+        margin-top: 25%;
     }
 }
 
@@ -857,7 +885,6 @@ h2 {
 
 .p-product-name {
     font-size: 17px;
-    font-weight: 700;
     margin: 15px 0 0 0;
 }
 
@@ -928,13 +955,14 @@ h2 {
 
 @media screen and (min-width:641px) {
     .topics-lists {
+        width: 90%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
 }
 
-@media screen and (min-width:641px) {
+@media screen and (min-width: 981px) {
     .topics-lists {
         width: 100%;
     }
@@ -1035,6 +1063,7 @@ h2 {
 }
 
 .info-title {
+    font-size: 16px;
     color: #333;
     line-height: 1.5;
 }
@@ -1050,6 +1079,7 @@ h2 {
     font-size: 0.8rem;
     color: #9a9a9a;
     text-align: justify;
+    text-align: center;
 }
 
 .sns-icons {
@@ -1132,6 +1162,7 @@ h2 {
     border-bottom: 1px solid #898787;
     padding-bottom: 8px;
     font-weight: 700;
+    text-align: left;
 }
 
 @media screen and (min-width: 641px) {
@@ -1208,6 +1239,8 @@ h2 {
     font-size: 20px;
     padding-bottom: 14px;
     border-bottom: 1px solid #666;
+    text-align: left;
+    color: #cbcbcb;
 }
 
 @media screen and (min-width: 641px) {
@@ -1721,6 +1754,7 @@ h2 {
     color: #ccc;
     font-size: 16px;
     margin-top: 32px;
+    text-align: left;
 }
 
 @media screen and (min-width: 641px) {
@@ -1754,6 +1788,7 @@ h2 {
     margin-top: 0;
     color: #a5a5a5;
     padding-bottom: 14px;
+    text-align: left;
 }
 
 @media screen and (min-width: 641px) {
@@ -1807,6 +1842,7 @@ h2 {
     .f-flex-right {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin: 0;
     }
 
