@@ -7,28 +7,37 @@ $('.drawer-icon').on('click', function() {
 });
 
 // header スクロール 表示・非表示
-// ウィンドウの幅が640px以下かどうかをチェック
-if (window.innerWidth <= 641) {
-  // 640px以下の画面のスクロール動作
-  const header = document.querySelector('.header');
-  let prevY = window.scrollY;
+// 画面をリサイズした際に作動
+window.addEventListener("resize", function() {
+  // 現在の画面幅を取得
+  const screenWidth = window.innerWidth;
 
-  window.addEventListener('scroll', () => {
+  // .header要素を取得
+  const header = document.querySelector(".header");
+
+  // 画面幅が641px以下かどうかをチェック
+  if (window.innerWidth <= 641) {
+    // 画面幅に応じてスクロール動作を設定
+    let prevY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
       const currentY = window.scrollY;
 
       // 上にスクロールしている場合、ヘッダーを表示
       if (currentY < prevY) {
-          header.classList.remove('hidden');
+        header.classList.remove('hidden');
       } else {
-          // 下にスクロールしていて、150pxを超えた場合、ヘッダーを非表示
-          if (currentY > 150) {
-              header.classList.add('hidden');
-          }
+        // 下にスクロールしていて、150pxを超えた場合、ヘッダーを非表示
+        if (currentY > 150) {
+          header.classList.add('hidden');
+        }
       }
 
       prevY = currentY;
-  });
-}
+    });
+  }
+});
+
 
 // swiper hero
 const swiper = new Swiper('.swiper', {
