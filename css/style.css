@@ -199,23 +199,27 @@ a {
     /* flex 順番入れ替え */
     order: 2;
     text-align: center;
+    margin-left: 15px;
 }
 
 @media screen and (min-width: 641px) {
     .header-logo {
         width: 171px;
+        margin-left: 0;
     }
 }
 
 @media screen and (min-width: 811px) {
     .header-logo {
         width: 210px;
+        margin-left: 0;
     }
 }
 
     @media screen and (min-width: 961px) {
         .header-logo {
             width: 265px;
+            margin-left: 0;
         }
 }
 
