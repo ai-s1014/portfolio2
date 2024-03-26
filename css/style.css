@@ -65,12 +65,12 @@ a {
 }
 
 .inner-topics {
+    width: 90%;
     padding: 48px 0;
 }
 
 @media screen and (min-width: 641px) {
     .inner-topics {
-        width: 90%;
         padding: 64px 0 0;
     }
 }
@@ -980,7 +980,6 @@ h2 {
 
 .topics-card {
     text-align: center;
-    margin: 0 25px;
 }
 
 @media screen and (min-width: 641px) {
@@ -1440,6 +1439,7 @@ h2 {
 /* アコーディオンメニュー 中身 */
 .product-name {
     font-size: 14.4px;
+    line-height: 1.4;
 }
 
 .product-name-ja {
@@ -1498,7 +1498,7 @@ h2 {
 
     .new::before {
         display: block;
-        top: -25%;
+        top: -10px;
     }
 }
 
@@ -1569,6 +1569,14 @@ h2 {
     .accordion-list::before {
         width: 40px;
         height: 40px;
+        top: 32%;
+        left: 20px;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .accordion-list::before {
+        top: 10%;
         left: 0;
     }
 }
