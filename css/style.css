@@ -64,6 +64,13 @@ a {
     margin: 0 auto;
 }
 
+@media screen and (min-width: 1440px) {
+    .inner-s {
+        max-width: 1440px;
+        height: 100%;
+    }
+}
+
 .inner-topics {
     width: 90%;
     padding: 48px 0;
@@ -834,25 +841,61 @@ h2 {
     }
 }
 
-.popular-menu {
+.menu-inner {
     width: 1200px;
+}
+
+@media screen and (min-width:641px) and (max-width: 780px) {
+    .menu-inner {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 781px) {
+    .menu-inner {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (min-width: 881px) {
+    .menu-inner {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .menu-inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .menu-inner {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-bottom: 32px;
+    }
+}
+
+
+
+.popular-menu {
     display: flex;
     justify-content: space-around;
     padding: 0 20px;
     margin: 0 auto;
 }
 
-@media screen and (min-width:641px) and (max-width: 980px) {
+@media screen and (min-width:641px) {
     .popular-menu {
-        width: 70%;
         flex-wrap: wrap;
         padding: 0;
-    }
-}
-
-@media screen and (min-width: 981px) {
-    .popular-menu {
-        width: 100%;
     }
 }
 
@@ -871,6 +914,14 @@ h2 {
     }
 }
 
+@media screen and (min-width: 981px) {
+    .popular-list {
+        width: 22%;
+        max-width: 250px;
+        height: auto;
+    }
+}
+
 /* PC表示 非表示 */
 .pc-none {
     display: block;
@@ -882,7 +933,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
     .pc-none {
         display: block;
     }
@@ -1160,10 +1211,6 @@ h2 {
 .notice {
     padding: 32px 0;
     background-color: #e5e5e5;
-}
-
-.inner-s {
-
 }
 
 .notice-title {
@@ -1854,7 +1901,6 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 0;
     }
 
     .f-flex-width {
