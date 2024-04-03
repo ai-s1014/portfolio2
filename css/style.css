@@ -184,11 +184,9 @@ a {
 
 @media screen and (min-width: 641px) {
     .header {
-        position: initial;
         box-shadow: none;
     }
 }
-
 
 /* 上に上がる動き */
 .header.hidden {
@@ -509,11 +507,16 @@ a {
     transition: all .3s; /* 表示の変化を0.3秒に指定 */
     position: absolute;
     width: 270px;
-    top: 51px;
-    left: 0;
-    transform: translateX(-100px);
+    top: 53px;
+    left: -113px;
     background-color: #3a3a3a;
     box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
+}
+
+@media screen and (min-width: 811px) {
+    .dropdown-menu {
+        top: 65px;
+    }
 }
 
 .dropdown-is-open:hover .dropdown-menu {
@@ -568,7 +571,13 @@ a {
 
 @media screen and (min-width:641px) {
     .hero {
-        padding-top: 0;
+        padding-top: 76px;
+    }
+}
+
+@media screen and (min-width: 811px) {
+    .hero {
+        padding-top: 100px;
     }
 }
 
@@ -1423,7 +1432,7 @@ h2 {
     content: "";
     width: 17px;
     height: 1px;
-    top: 50%;
+    bottom: 23px;
     right: 4px;
     background-color: #ccc;
 }

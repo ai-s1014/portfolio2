@@ -15,6 +15,9 @@ window.addEventListener("resize", function() {
   // .header要素を取得
   const header = document.querySelector(".header");
 
+  // .header-spを取得
+  const drawer = document.querySelector(".header-sp");
+
   // 画面幅が641px以下かどうかをチェック
   if (window.innerWidth <= 641) {
     // 画面幅に応じてスクロール動作を設定
@@ -28,11 +31,12 @@ window.addEventListener("resize", function() {
         header.classList.remove('hidden');
       } else {
         // 下にスクロールしていて、150pxを超えた場合、ヘッダーを非表示
-        if (currentY > 150) {
-          header.classList.add('hidden');
+          if (currentY > 150) {
+            if (!drawerNav.classList.contains("open")) {
+            header.classList.add('hidden');
+          }
         }
-      }
-
+      };
       prevY = currentY;
     });
   }
@@ -44,7 +48,6 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
     speed: 500,
-    
 
     // If we need pagination
     pagination: {
