@@ -5,37 +5,46 @@ $('.drawer-icon').on('click', function() {
 	$('.drawer-nav').toggleClass('open');
   $('.drawer-background').toggleClass('open');
   $('.header-sp').toggleClass('open');
-
-
 });
 
-// .header-spが開いたときにスクロールイベントを無効化
-$('.header-sp').on('click', function() {
-  // スクロールイベントのリスナーを削除
-  window.removeEventListener('scroll', handleScroll);
+// header スクロール表示非表示
+// drawer-iconがクリックされたかどうかのフラグ
+let iconClicked = false;
+
+// drawer-icon要素を取得
+const drawerIcon = document.querySelector('.drawer-icon');
+// ドロワーアイコンのクリックイベントを設定
+drawerIcon.addEventListener('click', function() {
+  iconClicked = !iconClicked; // フラグを反転させる
 });
 
-// スクロールイベントの処理
-function handleScroll() {
+// スクロールイベント
+function headerScroll() {
+  if (iconClicked) {
+    // drawer-iconがクリックされた場合は何もしない
+    return;
+  }
+  // 現在のスクロール量を取得
   const currentY = window.scrollY;
+  // header要素を取得
   const header = document.querySelector('.header');
 
-  // 上にスクロールしている場合、ヘッダーを表示
   if (currentY < prevY) {
+    // 上にスクロールしたらheader要素のhiddenクラスを削除
     header.classList.remove('hidden');
+  } else if (currentY > 150) {
+    // 下に150px以上スクロールしたらheader要素にhiddenクラスを付与
+    header.classList.add('hidden');
   } else {
-    // 下にスクロールしていて、150pxを超えた場合、ヘッダーを非表示
-    if (currentY > 150) {
-      header.classList.add('hidden');
-    }
+    header.classList.remove('hidden');
   }
+
   prevY = currentY;
 }
 
-// 初期値の設定
+// 初期化
 let prevY = window.scrollY;
-window.addEventListener('scroll', handleScroll);
-
+window.addEventListener('scroll', headerScroll);
 
 // swiper hero
 const swiper = new Swiper('.swiper', {

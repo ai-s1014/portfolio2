@@ -184,14 +184,17 @@ a {
 
 @media screen and (min-width: 641px) {
     .header {
+        position: static;
         box-shadow: none;
     }
 }
 
 /* 上に上がる動き */
-.header.hidden {
-    transform: translate3d(0, -100%, 0);
-    box-shadow: none;
+@media screen and (max-width: 640px) {
+    .header.hidden {
+        transform: translate3d(0, -100%, 0);
+        box-shadow: none;
+    }
 }
 
 .header-flex {
@@ -571,13 +574,13 @@ a {
 
 @media screen and (min-width:641px) {
     .hero {
-        padding-top: 76px;
+        padding-top: 0px;
     }
 }
 
 @media screen and (min-width: 811px) {
     .hero {
-        padding-top: 100px;
+        padding-top: 0px;
     }
 }
 
